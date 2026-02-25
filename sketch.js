@@ -100,7 +100,6 @@ const GROUPS = [
     freq: 164.8,
     wave: 'triangle',
     facts: [
-      '8.5% of the general category are multidimensionally poor.',
       'The top 10% hold 77% of total national wealth.',
       '74% of India\'s population could not afford a healthy diet.',
     ],
@@ -484,38 +483,45 @@ let oscPool = [];  // 6 always-running {osc, gain} pairs
 // Mid-range root per group (200–600 Hz, F# natural minor scale).
 // Bass oscillators are always added separately below 150 Hz.
 const GROUP_ROOTS = [
-  207.65, // 0  Scheduled Tribes    G#3
-  207.65, // 1  Dalits              G#3
-  220.00, // 2  Shudras             A3
-  246.94, // 3  OBCs                B3
-  293.66, // 4  General Category    D4
-  370.00, // 5  Brahmins            F#4
-  415.30, // 6  Kshatriyas          G#4
-  329.63, // 7  Vaishyas            E4
-  220.00, // 8  Muslims             A3
-  246.94, // 9  Hindus              B3
-  220.00, // 10 Christians          A3
-  329.63, // 11 Cow vigilantes      E4
-  370.00, // 12 BJP hardliners      F#4
-  493.88, // 13 Billionaires        B4
-  415.30, // 14 Modi                G#4
-  370.00, // 15 Amit Shah           F#4
-  554.37, // 16 Adani               C#5
-  493.88, // 17 Ambani              B4
-  293.66, // 18 Kushwaha            D4
-  277.18, // 19 Bachaul             C#4
-  207.65, // 20 LGBTQ+              G#3
+  207.65,  // 0  Scheduled Tribes    G#3
+  207.65,  // 1  Dalits              G#3
+  220.00,  // 2  Shudras             A3
+  246.94,  // 3  OBCs                B3
+  293.66,  // 4  General Category    D4
+  370.00,  // 5  Brahmins            F#4
+  415.30,  // 6  Kshatriyas          G#4
+  329.63,  // 7  Vaishyas            E4
+  220.00,  // 8  Muslims             A3
+  246.94,  // 9  Hindus              B3
+  220.00,  // 10 Christians          A3
+  329.63,  // 11 Cow vigilantes      E4
+  370.00,  // 12 BJP hardliners      F#4
+  493.88,  // 13 Billionaires        B4
+  415.30,  // 14 Modi                G#4
+  370.00,  // 15 Amit Shah           F#4
+  554.37,  // 16 Adani               C#5
+  493.88,  // 17 Ambani              B4
+  293.66,  // 18 Kushwaha            D4
+  277.18,  // 19 Bachaul             C#4
+  207.65,  // 20 LGBTQ+              G#3
 ];
 
 // F# minor 7 chord tones in semitones: root, m3, P5, m7
 const FM7_SEMITONES = [0, 3, 7, 10];
 
 // Bass oscillators: always-present F# minor notes below 150 Hz
-const BASS_FREQS = [92.50, 110.00]; // F#2, A2
+const BASS_FREQS = [92.50, 110.00];  // F#2, A2
 
 function initAudio() {
-  if (audioCtx) return;
-  audioCtx = new AudioContext();
+  if (audioCtx) {
+    // iOS Safari suspends AudioContext between gestures — always try to resume
+    if (audioCtx.state === 'suspended') audioCtx.resume();
+    return;
+  }
+  // webkitAudioContext fallback for older iOS Safari
+  const AC = window.AudioContext || window['webkitAudioContext'];
+  audioCtx = new AC();
+  audioCtx.resume();  // iOS requires explicit resume even inside a gesture handler
   // 2 bass oscillators (indices 0–1) + 4 mid oscillators (indices 2–5)
   for (let i = 0; i < 6; i++) {
     const osc = audioCtx.createOscillator();
@@ -583,7 +589,8 @@ function playPad(gi, durationSec = 7) {
       while (targetFreq > 600) targetFreq /= 2;
       while (targetFreq < 200) targetFreq *= 2;
       // Gentle detune spread across mid layers (±6 cents max)
-      const detuneCents = numMid > 1 ? (midIdx - (numMid - 1) / 2) * (12 / (numMid - 1)) : 0;
+      const detuneCents =
+          numMid > 1 ? (midIdx - (numMid - 1) / 2) * (12 / (numMid - 1)) : 0;
       targetFreq *= Math.pow(2, detuneCents / 1200);
 
       osc.frequency.setValueAtTime(osc.frequency.value, now);
@@ -603,13 +610,27 @@ function playPad(gi, durationSec = 7) {
 
 // ── Group names (parallel to GROUPS array) ────────────────────────────────
 const GROUP_NAMES = [
-  'Scheduled Tribes', 'Dalits / SCs', 'Shudras', 'OBCs',
-  'General Category', 'Brahmins', 'Kshatriyas', 'Vaishyas',
-  'Muslims', 'Hindus', 'Christians',
-  'Cow Vigilantes', 'BJP Hardliners',
+  'Scheduled Tribes',
+  'Dalits / SCs',
+  'Shudras',
+  'OBCs',
+  'General Category',
+  'Brahmins',
+  'Kshatriyas',
+  'Vaishyas',
+  'Muslims',
+  'Hindus',
+  'Christians',
+  'Cow Vigilantes',
+  'BJP Hardliners',
   'Billionaires',
-  'Modi', 'Amit Shah', 'Adani', 'Ambani',
-  'Kushwaha', 'Bachaul', 'LGBTQ+',
+  'Modi',
+  'Amit Shah',
+  'Adani',
+  'Ambani',
+  'Kushwaha',
+  'Bachaul',
+  'LGBTQ+',
 ];
 
 // ── Power relations (group index → indices it oppresses) ───────────────────
@@ -744,7 +765,7 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(30);
   init();
-  noLoop();
+  loop();  // keep looping so the first-visit hint can pulse; noLoop() called once settled
 }
 
 function init() {
@@ -841,6 +862,18 @@ function draw() {
     pop();
   }
 
+  // First-visit hint
+  if (firstTouch) {
+    const hint = 'tap to explore';
+    const pulse = 0.55 + 0.45 * sin(frameCount * 0.06);
+    noStroke();
+    textFont('Courier New');
+    textSize(11);
+    textAlign(CENTER, BOTTOM);
+    fill(200, 200, 200, 160 * pulse);
+    text(hint, width / 2, height - 22);
+  }
+
   if (panel) {
     panel.update();
     panel.render();
@@ -854,10 +887,13 @@ function draw() {
 }
 
 // ── Interaction ────────────────────────────────────────────────────────────
-function mousePressed() {
+let firstTouch = true;
+
+function handleInteraction(px, py) {
+  firstTouch = false;
   let nearestGi = 0, nearestD = Infinity;
   centers.forEach((c, i) => {
-    const d = dist(mouseX, mouseY, c.x, c.y);
+    const d = dist(px, py, c.x, c.y);
     if (d < nearestD) {
       nearestD = d;
       nearestGi = i;
@@ -865,13 +901,24 @@ function mousePressed() {
   });
 
   lastClickedGi = nearestGi;
-  hideSources();  // dismiss if open from previous click
+  hideSources();
   const g = GROUPS[nearestGi];
   const dur = 6 + g.facts.length * 1.5;
   playPad(nearestGi, dur);
   setScales(nearestGi);
-  panel = new Panel(mouseX, mouseY, g.color, g.facts, dur, GROUP_NAMES[nearestGi]);
+  panel = new Panel(px, py, g.color, g.facts, dur, GROUP_NAMES[nearestGi]);
   loop();
+}
+
+// Desktop click
+function mousePressed() {
+  if (touches.length === 0) handleInteraction(mouseX, mouseY);
+}
+
+// Mobile touch — return false prevents scroll and stops mouse event double-fire
+function touchStarted() {
+  if (touches.length > 0) handleInteraction(touches[0].x, touches[0].y);
+  return false;
 }
 
 // ── Panel ──────────────────────────────────────────────────────────────────
