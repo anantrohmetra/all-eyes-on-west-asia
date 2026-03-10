@@ -1,476 +1,252 @@
-// freq  = tone frequency (Hz) — low/somber for oppressed, higher/harsh for
-// powerful wave  = oscillator waveform: 'sine' (pure), 'triangle' (soft),
-// 'sawtooth' (harsh)
+// ── Middle East Escalation: February 28 – March 9, 2026 ───────────────────────
+// Objective data extracted from facts.md and official sources
+// Each party represented by boid count proportional to involvement level
 const GROUPS = [
-  // ── Caste groups ──────────────────────────────────────────────────────────
   {
-    color: [167, 230, 224],
-    count: 180,
-    freq: 82.4,
-    wave: 'sine',
-    facts: [
-      '32.6% of Scheduled Tribes are multidimensionally poor.',
-      'The 1931 Census remains the last source of publicly available caste-wise population data.',
-      'In 2011 a Socio-Economic and Caste Census was conducted, but its caste data was never released.',
-    ],
-    sources: [
-      {
-        label: 'Counting Castes and Inequalities in India — Kathmandu Post',
-        url:
-            'https://kathmandupost.com/columns/2025/05/22/counting-castes-and-inequalities-in-india'
-      },
-      {
-        label: 'NITI Aayog — Multidimensional Poverty Index',
-        url: 'https://niti.gov.in/national-multidimensional-poverty-index'
-      },
-    ]
-  },
-  {
-    color: [245, 175, 175],
-    count: 160,
-    freq: 98.0,
-    wave: 'sine',
-    facts: [
-      'One crime is committed against a Dalit every 18 minutes.',
-      '13 Dalits are murdered every week.',
-      '27.4% of Dalits / SCs are multidimensionally poor.',
-    ],
-    sources: [
-      {
-        label: 'National Campaign on Dalit Human Rights',
-        url: 'https://www.ncdhr.org.in'
-      },
-      {
-        label: 'Counting Castes and Inequalities — Kathmandu Post',
-        url:
-            'https://kathmandupost.com/columns/2025/05/22/counting-castes-and-inequalities-in-india'
-      },
-      {
-        label: 'Scheduled Caste violence — Wikipedia',
-        url: 'https://en.wikipedia.org/wiki/Caste-related_violence_in_India'
-      },
-    ]
-  },
-  {
-    color: [210, 180, 255],
-    count: 150,
-    freq: 110.0,
-    wave: 'sine',
-    facts: [
-      '"A Shudra is unfit to receive education." — Manusmriti',
-      '"A Brahmin can order a Shudra to serve him without any remuneration." — Manusmriti',
-      '"Nobody has the right to free him." — Manusmriti',
-    ],
-    sources: [
-      {
-        label: 'Manusmriti — Sacred Texts Archive',
-        url: 'https://www.sacred-texts.com/hin/manu.htm'
-      },
-      {
-        label: 'Manusmriti — Wikipedia',
-        url: 'https://en.wikipedia.org/wiki/Manusmriti'
-      },
-    ]
-  },
-  {
-    color: [255, 210, 160],
-    count: 120,
-    freq: 130.8,
-    wave: 'sine',
-    facts: [
-      '18.3% of Other Backward Classes are multidimensionally poor.',
-      '64% of total GST came from the bottom 50% of the population.',
-      'Only 4% of GST came from the top 10%.',
-    ],
-    sources: [
-      {
-        label: 'Counting Castes and Inequalities — Kathmandu Post',
-        url:
-            'https://kathmandupost.com/columns/2025/05/22/counting-castes-and-inequalities-in-india'
-      },
-      {
-        label: 'Oxfam India — Inequality Report',
-        url: 'https://www.oxfamindia.org/inequality-report'
-      },
-    ]
-  },
-  {
-    color: [210, 210, 210],
-    count: 50,
-    freq: 164.8,
-    wave: 'triangle',
-    facts: [
-      'The top 10% hold 77% of total national wealth.',
-      '74% of India\'s population could not afford a healthy diet.',
-    ],
-    sources: [
-      {
-        label: 'World Inequality Report (updated 2026) — wid.world',
-        url: 'https://wir2022.wid.world'
-      },
-      {
-        label: 'UN SOFI Report 2024 — FAO',
-        url: 'https://www.fao.org/publications/sofi'
-      },
-      {
-        label: 'Global Hunger Index 2023 — India',
-        url: 'https://www.globalhungerindex.org/india.html'
-      },
-      {
-        label: 'Oxfam India Inequality Report',
-        url: 'https://www.oxfamindia.org/inequality-report'
-      },
-    ]
-  },
-  {
-    color: [255, 236, 153],
-    count: 20,
-    freq: 261.6,
-    wave: 'triangle',
-    facts: [
-      '"Brahma gave birth to the Brahmins from his mouth." — Manusmriti',
-      '"He must never read the Vedas in the presence of the Shudras." — Manusmriti',
-    ],
-    sources: [
-      {
-        label: 'Manusmriti — Sacred Texts Archive',
-        url: 'https://www.sacred-texts.com/hin/manu.htm'
-      },
-      {
-        label: 'Varna system — Wikipedia',
-        url: 'https://en.wikipedia.org/wiki/Varna_(Hinduism)'
-      },
-    ]
-  },
-  {
-    color: [174, 213, 255],
-    count: 18,
-    freq: 293.7,
-    wave: 'triangle',
-    facts: [
-      '"The Kingdom of that monarch who looks on while a Shudra settles the law will sink low." — Manusmriti',
-    ],
-    sources: [
-      {
-        label: 'Manusmriti — Sacred Texts Archive',
-        url: 'https://www.sacred-texts.com/hin/manu.htm'
-      },
-    ]
-  },
-  {
-    color: [180, 240, 180],
-    count: 16,
+    name: 'United States',
+    color: [200, 220, 100],
+    count: 14,
     freq: 329.6,
-    wave: 'triangle',
+    wave: 'sawtooth',
     facts: [
-      'Vaishyas — the merchant-trading varna — historically used caste hierarchy to consolidate commercial capital while remaining insulated from manual labour.',
+      'Co-launched major military operation with Israel on February 28, 2026.',
+      'US forces struck more than 3,000 targets in Iran since February 28.',
+      'Sank Iranian warship IRIS Dena in Indian Ocean near Sri Lanka on March 2, 2026. Sri Lankan Navy recovered 80+ bodies and 32 survivors; 100+ missing.',
+      'Trump administration demanded Iran\'s nuclear disarmament as defensive measure.',
+      'Trump demanded unconditional surrender from Iran and stated new Iranian leader must receive US approval.',
     ],
     sources: [
       {
-        label: 'Manusmriti — Sacred Texts Archive',
-        url: 'https://www.sacred-texts.com/hin/manu.htm'
-      },
-    ]
-  },
-
-  // ── Religious groups ───────────────────────────────────────────────────────
-  {
-    color: [160, 220, 190],
-    count: 145,
-    freq: 116.5,
-    wave: 'sine',
-    facts: [
-      '84% of cow vigilante violence victims (2010–2017) were Muslim.',
-      'In the 2002 Gujarat riots ~1,000 were killed, mostly Muslims. 20,000 homes destroyed.',
-      '90% of religion-based hate crimes between 2009–2019 occurred after BJP came to power.',
-      'In 2024: 59 communal riots — 13 lives claimed, 10 of them Muslim.',
-    ],
-    sources: [
-      {
-        label: 'Cow Vigilante Violence — Wikipedia',
-        url: 'https://en.wikipedia.org/wiki/Cow_vigilante_violence_in_India'
+        label: 'India offered sanctuary to Iranian ship three days before US sank it — BBC News',
+        url: 'https://www.bbc.com/news/articles/c2e4yxj0pd3o'
       },
       {
-        label: '2002 Gujarat Riots — Ballard Brief',
-        url: 'https://ballardbrief.byu.edu/issue-briefs/the-2002-gujarat-riots'
-      },
-      {
-        label: 'Religious Hate Crimes 2023 — South Asia Justice Campaign',
-        url: 'https://www.southasiajusticecampaign.org'
-      },
-      {
-        label: 'India Communal Violence 2024 — CSSS',
-        url: 'https://csss-isla.com'
+        label: 'The final voyage of the Iranian warship sunk by the US — BBC News',
+        url: 'https://www.bbc.com/news/articles/c4geelnw7w3o'
       },
     ]
   },
   {
-    color: [255, 195, 160],
-    count: 95,
-    freq: 196.0,
-    wave: 'triangle',
-    facts: [
-      'India\'s 2023 GHI score is 28.7 — considered serious.',
-      'The poorer 50% of the world accounts for just 3% of carbon emissions from private capital.',
-    ],
-    sources: [
-      {
-        label: 'Global Hunger Index 2023',
-        url: 'https://www.globalhungerindex.org/india.html'
-      },
-      {label: 'World Inequality Report 2022', url: 'https://wir2022.wid.world'},
-    ]
-  },
-  {
-    color: [175, 205, 240],
-    count: 12,
+    name: 'Iran',
+    color: [150, 100, 200],
+    count: 13,
     freq: 220.0,
     wave: 'triangle',
     facts: [
-      '1 Christian killed in 2023 hate crimes.',
-      '1 Christian killed in 2024 mob lynching incidents.',
+      '1,255 deaths as of March 9, 2026 from US-Israel strikes.',
+      'Supreme Leader Ali Khamenei assassinated in strikes. Son Mojtaba Khamenei declared as 3rd supreme leader.',
+      'Minab girls\' school hit on February 28; at least 168 killed including children.',
+      'Fuel depots hit in Tehran and Karaj according to Iran\'s oil ministry.',
+      'Carried out retaliatory strikes on Saudi Arabia, UAE, Qatar, Oman, Iraq, Kuwait, Cyprus, and Turkey.',
+      'Fired 174 ballistic missiles (161 intercepted, 13 fell into sea); launched 689 UAVs (645 intercepted, 44 caused impact); fired 8 cruise missiles (all intercepted).',
     ],
     sources: [
       {
-        label: 'Religious Violence 2023 — South Asia Justice Campaign',
-        url: 'https://www.southasiajusticecampaign.org'
-      },
-    ]
-  },
-
-  // ── Actors of violence / power ─────────────────────────────────────────────
-  {
-    color: [230, 170, 170],
-    count: 30,
-    freq: 233.1,
-    wave: 'sawtooth',
-    facts: [
-      'At least 44 people killed by cow vigilantes between May 2015 and December 2018.',
-      '36 of those 44 victims were Muslim. About 280 injured in 100+ attacks.',
-      '97% of cow vigilante attacks reported after May 2014.',
-    ],
-    sources: [
-      {
-        label: 'Cow Vigilante Violence — Wikipedia',
-        url: 'https://en.wikipedia.org/wiki/Cow_vigilante_violence_in_India'
-      },
-      {
-        label: '44 Killed by Cow Vigilantes — The Print',
-        url:
-            'https://theprint.in/india/44-killed-by-cow-vigilantes-since-2015/153031/'
-      },
-      {
-        label: 'Cow Violence Tracker — IndiaSpend / Hindustan Times',
-        url: 'https://www.indiaspend.com/cow-violence/'
-      },
-      {
-        label: 'Cow Vigilante Violence — Human Rights Watch',
-        url:
-            'https://www.hrw.org/report/2019/02/19/violent-cow-protection-india'
+        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
     ]
   },
   {
-    color: [240, 185, 185],
-    count: 18,
+    name: 'Israel',
+    color: [100, 150, 220],
+    count: 12,
     freq: 246.9,
     wave: 'sawtooth',
     facts: [
-      '"Either prepare to die or get ready to kill." — Rally speech',
-      '"Even if 100 of us kill 20 lakhs of them, we will be victorious." — Rally speech',
-      'Hate speech increased nearly 500% from 2014 to 2018.',
+      'Israel Defense Forces conducted approximately 3,400 strikes and disabled more than 150 Iranian defense systems as of March 9.',
+      'Sent foot soldiers into South Lebanon and carried out airstrikes killing dozens according to Lebanese health officials.',
+      'Coordinated major military operation with US launched February 28, 2026.',
+      'Israeli special forces raid on Lebanese village killed 41+ civilians; 40+ wounded.',
+      'Issued evacuation orders for residents in southern Lebanon, urging movement north of the Litani River causing massive displacement.',
+      'Human Rights Watch found evidence Israel used white phosphorus in residential areas of southern Lebanon in violation of international humanitarian law.',
     ],
     sources: [
       {
-        label:
-            '90% Hate Crimes Post-2014; 500% Hate Speech Rise — FactChecker.in',
-        url: 'https://www.factchecker.in'
+        label: 'Dozens killed as Israeli special forces raid Lebanese village — BBC News',
+        url: 'https://www.bbc.com/news/articles/cy8l2p2l3v0o'
       },
       {
-        label: 'Communal Violence 2023–2025 — South Asia Justice Campaign',
-        url: 'https://www.southasiajusticecampaign.org'
-      },
-      {
-        label: 'Islamophobia in India — Ballard Brief',
-        url: 'https://ballardbrief.byu.edu/issue-briefs/the-2002-gujarat-riots'
-      },
-    ]
-  },
-
-  // ── Billionaire class ──────────────────────────────────────────────────────
-  {
-    color: [245, 240, 190],
-    count: 5,
-    freq: 440.0,
-    wave: 'triangle',
-    facts: [
-      '358 billionaires in India own approximately $1.9 trillion.',
-      'The richest 1% own 53% of India\'s wealth. The bottom 50% own just 4.1%.',
-    ],
-    sources: [
-      {
-        label: '358 Billionaires, Hurun Rich List — Business Standard 2025',
-        url:
-            'https://www.business-standard.com/finance/personal-finance/india-records-358-billionaires-ambani-keads-with-9-5-lakh-cr-wealth-125100100522_1.html'
-      },
-      {
-        label: 'Bottom 50% Wealth ($910B) — World Inequality Lab',
-        url: 'https://wir2022.wid.world'
-      },
-      {
-        label: '1% owns 53%, bottom 50% at 4.1% — Oxfam India',
-        url: 'https://www.oxfamindia.org/inequality-report'
-      },
-    ]
-  },
-
-  // ── Named individuals ──────────────────────────────────────────────────────
-  {
-    color: [255, 195, 175],
-    count: 1,
-    sizeMult: 5,
-    freq: 369.9,
-    wave: 'sawtooth',
-    facts: [
-      'Modi — claimed Muslim "infiltrators" threaten security of "our sisters and daughters".',
-      '90% of religion-based hate crimes occurred after Modi\'s BJP came to power in 2014.',
-    ],
-    sources: [
-      {label: 'Modi Hate Speech — The Wire', url: 'https://thewire.in'},
-      {
-        label: 'Religion-Based Hate Crimes After 2014 — Ballard Brief',
-        url: 'https://ballardbrief.byu.edu/issue-briefs/the-2002-gujarat-riots'
+        label: 'In maps: Ten days of strikes across the Middle East — BBC News',
+        url: 'https://www.bbc.com/news/articles/c4g0pnnj8xyo'
       },
     ]
   },
   {
-    color: [245, 170, 170],
-    count: 1,
-    sizeMult: 5,
-    freq: 349.2,
-    wave: 'sawtooth',
-    facts: [
-      'Amit Shah — presented Maharashtra Bhushan awards where 12 died of heatstroke.',
-    ],
-    sources: [
-      {
-        label: 'Maharashtra Bhushan Heatstroke Deaths — Indian Express',
-        url: 'https://indianexpress.com'
-      },
-      {label: 'Amit Shah at Ceremony — NDTV', url: 'https://www.ndtv.com'},
-    ]
-  },
-  {
-    color: [250, 235, 175],
-    count: 1,
-    sizeMult: 6,
-    freq: 523.3,
-    wave: 'sawtooth',
-    facts: [
-      'Adani — doubling coal-power to 38 GW. Will burn 155 MT of coal per annum.',
-      'CO₂ emissions will exceed 200 MT per annum. World\'s biggest private coal developer.',
-    ],
-    sources: [
-      {
-        label: 'Adani Coal Expansion — AdaniWatch',
-        url: 'https://adaniwatch.org'
-      },
-      {
-        label: 'Adani Coal Power Analysis — The Guardian',
-        url: 'https://www.theguardian.com/environment/adani'
-      },
-    ]
-  },
-  {
-    color: [245, 240, 165],
-    count: 1,
-    sizeMult: 6,
-    freq: 493.9,
-    wave: 'sawtooth',
-    facts: [
-      'Ambani — ₹9.5 lakh crore in wealth. India\'s wealthiest individual.',
-      '358 billionaires own ~$1.9T — more than the bottom 50% of India combined.',
-    ],
-    sources: [
-      {
-        label: 'India Records 358 Billionaires — Business Standard',
-        url:
-            'https://www.business-standard.com/finance/personal-finance/india-records-358-billionaires-ambani-keads-with-9-5-lakh-cr-wealth-125100100522_1.html'
-      },
-    ]
-  },
-  {
-    color: [220, 185, 185],
-    count: 1,
-    sizeMult: 3,
-    freq: 277.2,
-    wave: 'sawtooth',
-    facts: [
-      'Dinesh Kushwaha — BJP leader assaulted 65-year-old Bhawarlal Jain, mistaking him for Muslim. Jain died.',
-    ],
-    sources: [
-      {label: 'Kushwaha Assault — The Wire', url: 'https://thewire.in'},
-      {label: 'Bhawarlal Jain Death — NDTV', url: 'https://www.ndtv.com'},
-    ]
-  },
-  {
-    color: [225, 180, 180],
-    count: 1,
-    sizeMult: 3,
-    freq: 261.6,
-    wave: 'sawtooth',
-    facts: [
-      'Haribhushan Thakur Bachaul — BJP MLA: "Muslims should be set ablaze like Ravana effigies."',
-    ],
-    sources: [
-      {label: 'BJP MLA Hate Speech — The Wire', url: 'https://thewire.in'},
-      {label: 'Communal Hate Speech — NDTV', url: 'https://www.ndtv.com'},
-    ]
-  },
-
-  // ── LGBTQ+ community ──────────────────────────────────────────────────────
-  // index 22
-  {
-    color: [210, 190, 255],
-    count: 60,
+    name: 'Lebanon',
+    color: [180, 140, 100],
+    count: 8,
     freq: 174.6,
     wave: 'triangle',
     facts: [
-      'Section 377 of the IPC criminalized consensual same-sex relations for 158 years, until struck down in 2018.',
-      'In 2023 the Supreme Court declined to legalise same-sex marriage, leaving couples with no legal recognition.',
-      'The Transgender Persons (Protection of Rights) Act 2019 was widely criticised for requiring state certification of gender identity.',
-      'Hijra and other gender-diverse communities face systematic exclusion from employment, healthcare, and housing.',
-      'LGBTQ+ Dalits and Adivasis face compounded discrimination — caste, class, and sexuality intersect violently.',
-      'Conversion therapy — banned in India as a punishable offence.',
+      '486 people killed as of March 9, 2026 due to Israeli strikes according to Lebanese Health Ministry.',
+      'More than 700,000 people displaced from the starting of the war.',
+      'Hezbollah launched rocket and drone attack on military site in Haifa, Israel on March 2, marking first direct strike since November 2024 ceasefire.',
+      'Israeli strikes hit apartment in Ramada Hotel building in Raouche district of Beirut killing at least 4 people and wounding 10 others.',
+      'Lebanon experiencing intense military escalation with Israeli airstrikes across the country, particularly targeting southern Beirut suburbs and southern Lebanon.',
     ],
     sources: [
       {
-        label:
-            'Navtej Singh Johar v. Union of India (2018) — Supreme Court of India',
-        url:
-            'https://main.sci.gov.in/supremecourt/2016/7929/7929_2016_Judgement_06-Sep-2018.pdf'
+        label: 'Almost 700,000 displaced in Lebanon as war enters second week — UN News',
+        url: 'https://news.un.org/en/story/2026/03/1167098'
       },
+    ]
+  },
+  {
+    name: 'Iraq',
+    color: [160, 120, 100],
+    count: 8,
+    freq: 195.0,
+    wave: 'triangle',
+    facts: [
+      'Iraq\'s Prime Minister told US Secretary of State Marco Rubio that Iraq should not be used as launchpad for attacks in Middle East war.',
+      'Iran-backed Kataib Imam Ali group reported 4 members killed and 12 injured in US air attacks in northern Iraq.',
+      'Iranian Revolutionary Guards stated they targeted Al-Harir Air Base in Kurdistan region with five missiles.',
+      'Wissam Yassin, digital marketer in Iraq, noted Shiite community views Iran weakening as existential threat to political power.',
+      'Sunni community perceives war as opportunity to rearrange political landscape as Iranian influence on Iraq weakens.',
+    ],
+    sources: [
       {
-        label:
-            'Same-Sex Marriage Ruling (2023) — Supriya Chakraborty v. UoI — The Hindu',
-        url:
-            'https://www.thehindu.com/news/national/supreme-court-same-sex-marriage-verdict/article67461150.ece'
+        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
+    ]
+  },
+  {
+    name: 'Saudi Arabia',
+    color: [200, 80, 100],
+    count: 6,
+    freq: 164.8,
+    wave: 'triangle',
+    facts: [
+      'Targeted by Iranian retaliatory strikes for hosting US military bases.',
+      'Saudi Ministry of Defense reported destruction of 2 Iranian drones over kingdom\'s oil-rich eastern region.',
+      'Oil refineries including Shahbah oilfield hit by incoming Iranian drones.',
+      'Saudi kingdom declared Iran\'s attacks on civilian infrastructure—oil facilities, desalination plants, and CIA headquarters in Riyadh—have crossed critical red line.',
+      'Iranian missile attack hit US base in Saudi Arabia; US soldier died from wounds sustained 8 days later.',
+      'Iranian drone strike hit residential building in Al-Kharj killing 2 people of Indian and Bangladeshi nationalities and injuring 12 others.',
+    ],
+    sources: [
       {
-        label: 'NALSA v. Union of India (2014) — Transgender Rights Judgment',
-        url: 'https://main.sci.gov.in/jonew/judis/41411.pdf'
+        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
+    ]
+  },
+  {
+    name: 'United Arab Emirates',
+    color: [220, 140, 100],
+    count: 6,
+    freq: 185.0,
+    wave: 'triangle',
+    facts: [
+      'Targeted by Iranian retaliatory strikes for hosting US military bases.',
+      'Iranian drones hit hotels Burj al Arab and Fairmont The Palm Dubai, Dubai International Airport, and residential areas.',
+      'Dubai International Airport operating with limited resumption of flights following temporary suspension due to regional security concerns.',
+      'Zayed International Airport in Abu Dhabi partially operational as of March 10, 2026 following disruptions from Iran-Israel-US conflict.',
+      'UAE Consulate in Erbil targeted by drone strike resulting in material damage but no reported injuries.',
+      'Member of Federal National Council refuted reports of attack on Iran\'s desalination plant, emphasizing UAE will not treat Iranian people as regime has acted.',
+    ],
+    sources: [
       {
-        label: 'Transgender Persons Act 2019 — Human Rights Watch',
-        url: 'https://www.hrw.org/news/2019/12/02/india-transgender-bill-flawed'
+        label: '2026 Iranian strikes on the United Arab Emirates — Wikipedia',
+        url: 'https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates'
       },
+    ]
+  },
+  {
+    name: 'Qatar',
+    color: [200, 160, 80],
+    count: 5,
+    freq: 196.0,
+    wave: 'sine',
+    facts: [
+      'Targeted by Iranian retaliatory strikes for hosting US military bases.',
+      'Qatar\'s Ministry of Interior reported 66 Iranian missiles targeted Qatar, which were intercepted.',
+      'Debris from intercepted missiles caused 16 injuries.',
+      'Qatar hosts major US military installations and major LNG export facilities threatened by conflict.',
+    ],
+    sources: [
       {
-        label: 'ILGA World — State-Sponsored Homophobia Report',
-        url: 'https://ilga.org/state-sponsored-homophobia-report'
+        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
+    ]
+  },
+  {
+    name: 'Oman',
+    color: [160, 150, 100],
+    count: 4,
+    freq: 164.0,
+    wave: 'sine',
+    facts: [
+      'Targeted by Iranian retaliatory strikes for hosting US military bases.',
+      'Hosted multiple rounds of nuclear and political talks between US and Iran; two countries have had no formal diplomatic relations since April 7, 1980.',
+      'Omani Minister of Foreign Affairs Badr al-Busaidi, who mediated US-Iran talks before war, stated diplomatic options remain available to de-escalate Middle East situation.',
+      'Two Iranian drones hit Duqm Port in Al Wusta Governorate with one striking mobile workers\' housing unit.',
+      'Oil tanker flying Marshall Islands flag attacked by Iranian drone boat.',
+      'Fuel tank at Duqm Port hit by several unmanned aircraft on March 3.',
+    ],
+    sources: [
       {
-        label: 'LGBTQ+ Rights in India — Wikipedia',
-        url: 'https://en.wikipedia.org/wiki/LGBT_rights_in_India'
+        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
+      },
+    ]
+  },
+  {
+    name: 'Turkey',
+    color: [200, 120, 100],
+    count: 4,
+    freq: 207.65,
+    wave: 'sine',
+    facts: [
+      'Targeted by Iranian retaliatory strikes.',
+      'Iranian missiles and drones penetrated Turkish airspace.',
+      'President Erdogan told Iranian President Pezeshkian that airspace violation "cannot be excused for any reason whatsoever."',
+      'Erdogan stated Turkey will continue to take all necessary measures against airspace violations.',
+      'Turkey hosts US military presence and strategic importance for regional stability.',
+    ],
+    sources: [
+      {
+        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
+      },
+    ]
+  },
+  {
+    name: 'Kuwait',
+    color: [200, 100, 100],
+    count: 3,
+    freq: 146.83,
+    wave: 'triangle',
+    facts: [
+      'Targeted by Iranian retaliatory strikes for hosting US military bases.',
+      'Iranian drone strike hit government high-rise; building engulfed in flames.',
+      'Kuwait hosts critical US military installations.',
+    ],
+    sources: [
+      {
+        label: 'Kuwaiti government high-rise hit by Iranian drone — BBC Video',
+        url: 'https://www.bbc.com/news/videos/c9wnex8g5dyo'
+      },
+    ]
+  },
+  {
+    name: 'Cyprus',
+    color: [180, 120, 80],
+    count: 2,
+    freq: 138.59,
+    wave: 'sine',
+    facts: [
+      'Targeted by Iranian retaliatory strikes.',
+      'Cyprus likely hosts US military interests and serves as strategic location for regional operations.',
+      'Represents extension of Iranian response beyond Middle East to broader international coalition supporting US-Israel operations.',
+    ],
+    sources: [
+      {
+        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
     ]
   },
@@ -480,31 +256,7 @@ const GROUPS = [
 let audioCtx = null;
 let oscPool = [];  // 6 always-running {osc, gain} pairs
 
-// Mid-range root per group (200–600 Hz, F# natural minor scale).
-// Bass oscillators are always added separately below 150 Hz.
-const GROUP_ROOTS = [
-  207.65,  // 0  Scheduled Tribes    G#3
-  207.65,  // 1  Dalits              G#3
-  220.00,  // 2  Shudras             A3
-  246.94,  // 3  OBCs                B3
-  293.66,  // 4  General Category    D4
-  370.00,  // 5  Brahmins            F#4
-  415.30,  // 6  Kshatriyas          G#4
-  329.63,  // 7  Vaishyas            E4
-  220.00,  // 8  Muslims             A3
-  246.94,  // 9  Hindus              B3
-  220.00,  // 10 Christians          A3
-  329.63,  // 11 Cow vigilantes      E4
-  370.00,  // 12 BJP hardliners      F#4
-  493.88,  // 13 Billionaires        B4
-  415.30,  // 14 Modi                G#4
-  370.00,  // 15 Amit Shah           F#4
-  554.37,  // 16 Adani               C#5
-  493.88,  // 17 Ambani              B4
-  293.66,  // 18 Kushwaha            D4
-  277.18,  // 19 Bachaul             C#4
-  207.65,  // 20 LGBTQ+              G#3
-];
+// Frequencies extracted from GROUPS array—no need for separate mapping
 
 // F# minor 7 chord tones in semitones: root, m3, P5, m7
 const FM7_SEMITONES = [0, 3, 7, 10];
@@ -514,14 +266,16 @@ const BASS_FREQS = [92.50, 110.00];  // F#2, A2
 
 function initAudio() {
   if (audioCtx) {
-    // iOS Safari suspends AudioContext between gestures — always try to resume
+    // iOS Safari suspends AudioContext between gestures — always try to
+    // resume
     if (audioCtx.state === 'suspended') audioCtx.resume();
     return;
   }
   // webkitAudioContext fallback for older iOS Safari
   const AC = window.AudioContext || window['webkitAudioContext'];
   audioCtx = new AC();
-  audioCtx.resume();  // iOS requires explicit resume even inside a gesture handler
+  audioCtx.resume();  // iOS requires explicit resume even inside a gesture
+                      // handler
   // 2 bass oscillators (indices 0–1) + 4 mid oscillators (indices 2–5)
   for (let i = 0; i < 6; i++) {
     const osc = audioCtx.createOscillator();
@@ -554,7 +308,7 @@ function playPad(gi, durationSec = 7) {
 
   const g = GROUPS[gi];
   const now = audioCtx.currentTime;
-  const midRoot = GROUP_ROOTS[gi] || 220.00;
+  const midRoot = g.freq || 220.00;
 
   const layers = Math.min(6, Math.max(1, Math.ceil(g.count / 30)));
   const numBass = layers >= 4 ? 2 : 1;
@@ -608,69 +362,45 @@ function playPad(gi, durationSec = 7) {
   }
 }
 
-// ── Group names (parallel to GROUPS array) ────────────────────────────────
-const GROUP_NAMES = [
-  'Scheduled Tribes',
-  'Dalits / SCs',
-  'Shudras',
-  'OBCs',
-  'General Category',
-  'Brahmins',
-  'Kshatriyas',
-  'Vaishyas',
-  'Muslims',
-  'Hindus',
-  'Christians',
-  'Cow Vigilantes',
-  'BJP Hardliners',
-  'Billionaires',
-  'Modi',
-  'Amit Shah',
-  'Adani',
-  'Ambani',
-  'Kushwaha',
-  'Bachaul',
-  'LGBTQ+',
-];
-
-// ── Power relations (group index → indices it oppresses) ───────────────────
-const OPPRESSES = {
-  5: [0, 1, 2, 3, 20],  // Brahmins       → STs, Dalits, Shudras, OBCs, LGBTQ+
-  6: [0, 1, 2, 3],      // Kshatriyas     → lower castes
-  7: [0, 1, 2, 3],      // Vaishyas       → lower castes
-  9: [8, 10, 20],       // Hindus (majority) → Muslims, Christians, LGBTQ+
-  11: [8],              // Cow vigilantes  → Muslims
-  12: [8, 10, 20],      // BJP hardliners  → Muslims, Christians, LGBTQ+
-  13: [0, 1, 2, 3],     // Billionaires    → poor groups
-  14: [8, 0, 1, 2],     // Modi            → Muslims, lower castes
-  15: [8, 0, 1, 2],     // Amit Shah       → Muslims, lower castes
-  16: [0, 1, 2, 3],     // Adani           → working poor
-  17: [0, 1, 2, 3],     // Ambani          → working poor
-  18: [8],              // Kushwaha        → Muslims
-  19: [8],              // Bachaul         → Muslims
+// ── Conflict Relations (group index → indices affected by/related to this group) ─
+// When user clicks a party, related parties are highlighted
+// Based on direct mentions in facts.md and documented military/diplomatic involvement
+const AFFECTS = {
+  0: [1, 3, 4, 5, 6, 7, 8, 9],     // USA attacks/coordinates with Israel → Iran, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey
+  1: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10], // Iran strikes → USA, Israel, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey, Kuwait, Cyprus
+  2: [1, 3, 4, 5],                 // Israel strikes → Iran, Lebanon, Iraq, Saudi Arabia (likely through drone/missile intelligence)
+  3: [0, 2],                       // Lebanon (Hezbollah) → USA, Israel (direct retaliation)
+  4: [0, 1, 2],                    // Iraq → USA, Iran, Israel (caught in middle)
+  5: [1, 0],                       // Saudi Arabia affected by → Iran, USA (hosts bases, targeted)
+  6: [1, 0],                       // UAE affected by → Iran, USA (hosts bases, targeted)
+  7: [1, 0],                       // Qatar affected by → Iran, USA (hosts bases, targeted)
+  8: [1, 0],                       // Oman affected by → Iran, USA (hosts bases, targeted)
+  9: [1, 0],                       // Turkey affected by → Iran, USA (airspace violated)
+  10: [1, 0],                      // Kuwait affected by → Iran, USA (hosts bases, targeted)
+  11: [1, 0],                      // Cyprus affected by → Iran, USA (hosts bases, targeted)
 };
 
-// Reverse: oppressed[gi] = list of group indices that oppress gi
-const OPPRESSED_BY = {};
-for (const [opp, victims] of Object.entries(OPPRESSES)) {
-  for (const v of victims) {
-    (OPPRESSED_BY[v] = OPPRESSED_BY[v] || []).push(+opp);
+// Reverse: who affects each party
+const AFFECTED_BY = {};
+for (const [actor, affected] of Object.entries(AFFECTS)) {
+  for (const party of affected) {
+    (AFFECTED_BY[party] = AFFECTED_BY[party] || []).push(+actor);
   }
 }
 
 function setScales(gi) {
-  const victims = OPPRESSES[gi] || [];
-  const oppressors = OPPRESSED_BY[gi] || [];
+  const affected = AFFECTS[gi] || [];
+  const affectedBy = AFFECTED_BY[gi] || [];
   const targets = {};
 
-  if (victims.length) {
-    // Clicked oppressor: it swells, victims shrink
-    targets[gi] = 2.4;
-    victims.forEach(v => targets[v] = 0.3);
-  } else if (oppressors.length) {
-    // Clicked oppressed group: it shrinks, oppressors loom large
-    targets[gi] = 0.35;
-    oppressors.forEach(o => targets[o] = 2.2);
+  if (affected.length) {
+    // Clicked actor: highlight self and all affected parties
+    targets[gi] = 2.0;
+    affected.forEach(v => targets[v] = 1.5);
+  } else if (affectedBy.length) {
+    // Clicked affected party: highlight self and all actors affecting it
+    targets[gi] = 1.5;
+    affectedBy.forEach(o => targets[o] = 2.0);
   } else {
     targets[gi] = 1.7;
   }
@@ -765,7 +495,8 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(30);
   init();
-  loop();  // keep looping so the first-visit hint can pulse; noLoop() called once settled
+  loop();  // keep looping so the first-visit hint can pulse; noLoop() called
+           // once settled
 }
 
 function init() {
@@ -906,7 +637,7 @@ function handleInteraction(px, py) {
   const dur = 6 + g.facts.length * 1.5;
   playPad(nearestGi, dur);
   setScales(nearestGi);
-  panel = new Panel(px, py, g.color, g.facts, dur, GROUP_NAMES[nearestGi]);
+  panel = new Panel(px, py, g.color, g.facts, dur, g.name);
   loop();
 }
 
