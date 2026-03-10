@@ -5,7 +5,7 @@ const GROUPS = [
   {
     name: 'United States',
     color: [200, 220, 100],
-    count: 14,
+    count: 140,
     freq: 329.6,
     wave: 'sawtooth',
     facts: [
@@ -29,7 +29,7 @@ const GROUPS = [
   {
     name: 'Iran',
     color: [150, 100, 200],
-    count: 13,
+    count: 130,
     freq: 220.0,
     wave: 'triangle',
     facts: [
@@ -50,7 +50,7 @@ const GROUPS = [
   {
     name: 'Israel',
     color: [100, 150, 220],
-    count: 12,
+    count: 120,
     freq: 246.9,
     wave: 'sawtooth',
     facts: [
@@ -75,7 +75,7 @@ const GROUPS = [
   {
     name: 'Lebanon',
     color: [180, 140, 100],
-    count: 8,
+    count: 80,
     freq: 174.6,
     wave: 'triangle',
     facts: [
@@ -95,7 +95,7 @@ const GROUPS = [
   {
     name: 'Iraq',
     color: [160, 120, 100],
-    count: 8,
+    count: 80,
     freq: 195.0,
     wave: 'triangle',
     facts: [
@@ -115,7 +115,7 @@ const GROUPS = [
   {
     name: 'Saudi Arabia',
     color: [200, 80, 100],
-    count: 6,
+    count: 60,
     freq: 164.8,
     wave: 'triangle',
     facts: [
@@ -136,7 +136,7 @@ const GROUPS = [
   {
     name: 'United Arab Emirates',
     color: [220, 140, 100],
-    count: 6,
+    count: 60,
     freq: 185.0,
     wave: 'triangle',
     facts: [
@@ -157,7 +157,7 @@ const GROUPS = [
   {
     name: 'Qatar',
     color: [200, 160, 80],
-    count: 5,
+    count: 50,
     freq: 196.0,
     wave: 'sine',
     facts: [
@@ -176,7 +176,7 @@ const GROUPS = [
   {
     name: 'Oman',
     color: [160, 150, 100],
-    count: 4,
+    count: 40,
     freq: 164.0,
     wave: 'sine',
     facts: [
@@ -197,7 +197,7 @@ const GROUPS = [
   {
     name: 'Turkey',
     color: [200, 120, 100],
-    count: 4,
+    count: 40,
     freq: 207.65,
     wave: 'sine',
     facts: [
@@ -217,7 +217,7 @@ const GROUPS = [
   {
     name: 'Kuwait',
     color: [200, 100, 100],
-    count: 3,
+    count: 30,
     freq: 146.83,
     wave: 'triangle',
     facts: [
@@ -235,7 +235,7 @@ const GROUPS = [
   {
     name: 'Cyprus',
     color: [180, 120, 80],
-    count: 2,
+    count: 20,
     freq: 138.59,
     wave: 'sine',
     facts: [
