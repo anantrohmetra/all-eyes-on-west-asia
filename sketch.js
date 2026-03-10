@@ -727,7 +727,7 @@ class Panel {
 
     const lines =
         facts.reduce((acc, f) => acc + Math.ceil(f.length / 44) + 0.5, 0);
-    this.h = PP * 2 + 14 + lines * PH + 8;  // +14 for group name header
+    this.h = PP * 2 + 28 + lines * PH + 8;  // +28 for larger group name header with spacing
     this.x = constrain(x, PP, width - PW - PP);
     this.y = constrain(y, PP, height - this.h - PP);
   }
@@ -771,14 +771,16 @@ class Panel {
     // Group name header
     textFont('Courier New');
     textAlign(LEFT, TOP);
-    textSize(9);
-    fill(r, g, bl, al * 0.45);
-    text(this.groupName.toUpperCase(), this.x + PP, py + PP - 2);
+    textSize(14);
+    textStyle(BOLD);
+    fill(r, g, bl, al * 0.95);
+    text(this.groupName.toUpperCase(), this.x + PP, py + PP - 4);
 
     // Facts
     textSize(11);
+    textStyle(NORMAL);
     textLeading(PH);
-    let ty = py + PP + 14;
+    let ty = py + PP + 28;
     for (const fact of this.facts) {
       fill(r, g, bl, al * 0.92);
       text(fact, this.x + PP, ty, PW - PP * 2 - 4);
