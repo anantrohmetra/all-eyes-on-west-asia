@@ -559,6 +559,21 @@ function setup() {
   init();
   loop();  // keep looping so the first-visit hint can pulse; noLoop() called
            // once settled
+
+  // Mobile touch event handling
+  document.addEventListener('touchmove', (e) => {
+    if (e.target === document.body || e.target.tagName === 'CANVAS') {
+      e.preventDefault();
+    }
+  }, {passive: false});
+
+  document.addEventListener('touchstart', (e) => {
+    if (e.touches.length > 0 && (e.target === document.body || e.target.tagName === 'CANVAS')) {
+      const touch = e.touches[0];
+      handleInteraction(touch.clientX, touch.clientY);
+      e.preventDefault();
+    }
+  }, {passive: false});
 }
 
 function init() {
