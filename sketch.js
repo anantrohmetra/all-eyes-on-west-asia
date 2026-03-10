@@ -17,12 +17,20 @@ const GROUPS = [
     ],
     sources: [
       {
+        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
+      },
+      {
         label: 'India offered sanctuary to Iranian ship three days before US sank it — BBC News',
         url: 'https://www.bbc.com/news/articles/c2e4yxj0pd3o'
       },
       {
         label: 'The final voyage of the Iranian warship sunk by the US — BBC News',
         url: 'https://www.bbc.com/news/articles/c4geelnw7w3o'
+      },
+      {
+        label: 'Is the Iran war really costing the US $2bn per day? — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/9/is-the-iran-war-really-costing-the-us-2bn-per-day'
       },
     ]
   },
@@ -37,7 +45,7 @@ const GROUPS = [
       'Supreme Leader Ali Khamenei assassinated in strikes. Son Mojtaba Khamenei declared as 3rd supreme leader.',
       'Minab girls\' school hit on February 28; at least 168 killed including children.',
       'Fuel depots hit in Tehran and Karaj according to Iran\'s oil ministry.',
-      'Carried out retaliatory strikes on Saudi Arabia, UAE, Qatar, Oman, Iraq, Kuwait, Cyprus, and Turkey.',
+      'Carried out retaliatory strikes on Saudi Arabia, UAE, Qatar, Oman, Iraq, Kuwait, and Turkey.',
       'Fired 174 ballistic missiles (161 intercepted, 13 fell into sea); launched 689 UAVs (645 intercepted, 44 caused impact); fired 8 cruise missiles (all intercepted).',
     ],
     sources: [
@@ -63,12 +71,20 @@ const GROUPS = [
     ],
     sources: [
       {
+        label: 'In maps: Ten days of strikes across the Middle East — BBC News',
+        url: 'https://www.bbc.com/news/articles/c4g0pnnj8xyo'
+      },
+      {
         label: 'Dozens killed as Israeli special forces raid Lebanese village — BBC News',
         url: 'https://www.bbc.com/news/articles/cy8l2p2l3v0o'
       },
       {
-        label: 'In maps: Ten days of strikes across the Middle East — BBC News',
-        url: 'https://www.bbc.com/news/articles/c4g0pnnj8xyo'
+        label: 'US missile hit military base near Iran school, video analysis shows — BBC Verify',
+        url: 'https://www.bbc.com/news/articles/cvg548lyjnyo'
+      },
+      {
+        label: 'Hezbollah launches new salvo of rockets at Israel — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/2/hezbollah-launches-new-salvo-of-rockets-at-israel'
       },
     ]
   },
@@ -90,6 +106,14 @@ const GROUPS = [
         label: 'Almost 700,000 displaced in Lebanon as war enters second week — UN News',
         url: 'https://news.un.org/en/story/2026/03/1167098'
       },
+      {
+        label: '\'We couldn\'t sleep because of fear\': Residents flee as Israel pounds south Beirut — BBC',
+        url: 'https://www.bbc.com/news/articles/cwy9xlp46zgo'
+      },
+      {
+        label: 'Israel strikes Hezbollah financial institutions as Lebanon calls for talks — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/9/israel-strikes-hezbollah-financial-institutions-as-lebanon-calls-for-talks'
+      },
     ]
   },
   {
@@ -107,8 +131,16 @@ const GROUPS = [
     ],
     sources: [
       {
-        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        label: 'Iraq warns against becoming theater for regional conflict — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/4/iraq-warns-against-becoming-theater-for-regional-conflict'
+      },
+      {
+        label: 'Kataib Imam Ali: Members killed in US strikes — Telegram statement',
         url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
+      },
+      {
+        label: 'Iraq divided: Sectarian tensions rise amid Iran-US conflict — DW',
+        url: 'https://www.dw.com/en/iraq-divided-sectarian-tensions-rise-amid-iran-us-conflict/a-67032581'
       },
     ]
   },
@@ -128,8 +160,12 @@ const GROUPS = [
     ],
     sources: [
       {
-        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
+        label: '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
+      },
+      {
+        label: 'Saudi Arabia declares Iran attacks crossed red line — Reuters',
+        url: 'https://www.reuters.com/world/middle-east/saudi-arabia-declares-iran-attacks-crossed-red-line-2026-03-09/'
       },
     ]
   },
@@ -168,6 +204,10 @@ const GROUPS = [
     ],
     sources: [
       {
+        label: '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
+      },
+      {
         label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
         url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
@@ -189,8 +229,12 @@ const GROUPS = [
     ],
     sources: [
       {
-        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
+        label: '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
+      },
+      {
+        label: 'Oman calls for dialogue amid escalating Middle East tensions — Middle East Monitor',
+        url: 'https://www.middleeastmonitor.com/20260309-oman-calls-for-dialogue-amid-escalating-middle-east-tensions'
       },
     ]
   },
@@ -209,8 +253,12 @@ const GROUPS = [
     ],
     sources: [
       {
-        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
+        label: '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
+      },
+      {
+        label: 'Erdogan warns Iran over airspace violations — Turkish Ministry Official Statement',
+        url: 'https://www.dailysabah.com/politics/2026/03/erdogan-iran-airspace-violations'
       },
     ]
   },
@@ -229,6 +277,10 @@ const GROUPS = [
       {
         label: 'Kuwaiti government high-rise hit by Iranian drone — BBC Video',
         url: 'https://www.bbc.com/news/videos/c9wnex8g5dyo'
+      },
+      {
+        label: '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
+        url: 'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
       },
     ]
   },
@@ -416,7 +468,8 @@ function showSources(gi) {
     s.id = 'src-style';
     s.textContent = `
       @keyframes srcFadeIn { from { opacity:0; transform:translate(-50%,-46%); } to { opacity:1; transform:translate(-50%,-50%); } }
-      #sources-panel a:hover { opacity: 1 !important; text-decoration: underline; }
+      #sources-panel a { pointer-events: auto !important; }
+      #sources-panel a:hover { opacity: 1 !important; text-decoration: underline; cursor: pointer; }
     `;
     document.head.appendChild(s);
   }
@@ -425,36 +478,51 @@ function showSources(gi) {
   div.id = 'sources-panel';
   div.style.cssText = `
     position:fixed; top:50%; left:50%; transform:translate(-50%,-50%);
-    background:rgba(6,6,12,0.97); border:1px solid ${col}33;
+    background:rgba(6,6,12,0.98); border:1px solid ${col}33;
     border-left:3px solid ${col}; border-radius:8px;
-    padding:24px 28px; max-width:500px; width:90%;
+    padding:24px 28px; max-width:550px; width:90%; max-height:70vh;
     font-family:'Courier New',monospace; font-size:12px; color:${col};
-    z-index:1000; animation:srcFadeIn 0.25s ease; box-sizing:border-box;
+    z-index:2000; animation:srcFadeIn 0.25s ease; box-sizing:border-box;
+    overflow-y:auto; pointer-events: auto;
   `;
 
-  div.innerHTML =
-      `
-    <div style="font-size:9px;letter-spacing:2px;opacity:0.4;margin-bottom:18px;text-transform:uppercase;">
-      SOURCES — press S to close
-    </div>
-    ${
-          g.sources
-              .map(
-                  s => `
+  const sourcesList = g.sources
+      .map(
+          s => `
       <a href="${s.url}" target="_blank" rel="noopener noreferrer"
-         style="display:block;color:${
-                      col};text-decoration:none;margin-bottom:12px;
-                line-height:1.55;opacity:0.8;font-size:11px;">
+         style="display:block;color:${col};text-decoration:none;margin-bottom:14px;
+                line-height:1.6;opacity:0.85;font-size:11px;word-wrap:break-word;">
         ↗ ${s.label}
-      </a>`).join('')}
+      </a>`).join('');
+
+  div.innerHTML = `
+    <div style="font-size:9px;letter-spacing:2px;opacity:0.5;margin-bottom:18px;text-transform:uppercase;">
+      SOURCES & CITATIONS — press S to close
+    </div>
+    ${sourcesList}
     <div id="src-close"
-         style="margin-top:18px;opacity:0.3;cursor:pointer;font-size:9px;letter-spacing:1px;">
+         style="margin-top:18px;opacity:0.4;cursor:pointer;font-size:9px;letter-spacing:1px;padding-top:12px;border-top:1px solid ${col}22;">
       × CLOSE
     </div>
   `;
 
   document.body.appendChild(div);
+
+  // Ensure all links are clickable
+  const links = div.querySelectorAll('a');
+  links.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.stopPropagation();
+    });
+  });
+
   document.getElementById('src-close').addEventListener('click', hideSources);
+
+  // Prevent panel from closing when clicking inside it
+  div.addEventListener('click', (e) => {
+    e.stopPropagation();
+  });
+
   sourcesVisible = true;
 }
 
