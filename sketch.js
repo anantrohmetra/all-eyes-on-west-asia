@@ -375,18 +375,25 @@ function setScales(gi) {
   const targets = {};
 
   if (affected.length) {
-    // Clicked actor: highlight self and all affected parties
-    targets[gi] = 2.0;
-    affected.forEach(v => targets[v] = 1.5);
+    // Clicked actor: highlight self (brightest) and all affected parties (dim)
+    targets[gi] = 2.5;  // Selected group - brightest
+    affected.forEach(v => targets[v] = 1.2);  // Related parties - dim
   } else if (affectedBy.length) {
-    // Clicked affected party: highlight self and all actors affecting it
-    targets[gi] = 1.5;
-    affectedBy.forEach(o => targets[o] = 2.0);
+    // Clicked affected party: highlight self (brightest) and all actors affecting it (dim)
+    targets[gi] = 2.5;  // Selected group - brightest
+    affectedBy.forEach(o => targets[o] = 1.2);  // Related parties - dim
   } else {
-    targets[gi] = 1.7;
+    targets[gi] = 2.5;  // Fallback: brightest
   }
 
-  for (const b of boids) b.targetScale = targets[b.groupId] ?? 1.0;
+  // Hide all other groups completely
+  for (let i = 0; i < GROUPS.length; i++) {
+    if (!(i === gi || affected.includes(i) || affectedBy.includes(i))) {
+      targets[i] = 0;  // Invisible
+    }
+  }
+
+  for (const b of boids) b.targetScale = targets[b.groupId] ?? 0;
 }
 
 function resetScales() {
@@ -551,9 +558,9 @@ function draw() {
     if (Math.abs(b.scale - b.targetScale) > 0.005) allSettled = false;
 
     const [r, g, bl] = b.col;
-    // Opacity: swelling boids brighten, shrinking ones fade
-    const baseAlpha = b.circle ? 185 : 165;
-    const alpha = baseAlpha * constrain(b.scale * 0.7 + 0.3, 0.15, 1.4);
+    // Opacity: selected boids are brightest, invisible when scale=0
+    const baseAlpha = b.circle ? 220 : 200;
+    const alpha = baseAlpha * constrain(b.scale * 0.5 + 0.2, 0, 1.5);
 
     noFill();
     push();
