@@ -357,7 +357,7 @@ function playPad(gi, durationSec = 7) {
   const numBass = layers >= 4 ? 2 : 1;
   const numMid = layers - numBass;
 
-  const peakVol = 0.12 / Math.sqrt(layers);  // Increased volume for mobile audibility
+  const peakVol = 0.042 / Math.sqrt(layers);
   const glideTime = 0.9;
   const attackTime = 1.5;
   const releaseTime = 2.0;
@@ -695,10 +695,10 @@ function draw() {
     const pulse = 0.55 + 0.45 * sin(frameCount * 0.06);
     noStroke();
     textFont('Courier New');
-    textSize(14);  // Increased from 11 for mobile readability
+    textSize(11);
     textAlign(CENTER, BOTTOM);
     fill(200, 200, 200, 160 * pulse);
-    text(hint, width / 2, height - 28);
+    text(hint, width / 2, height - 22);
   }
 
   if (panel) {
@@ -750,9 +750,9 @@ function touchStarted() {
 }
 
 // ── Panel ──────────────────────────────────────────────────────────────────
-const PW = 380;  // Panel width (increased for mobile legibility)
-const PH = 22;   // Line height (increased for spacing)
-const PP = 24;   // Padding (increased)
+const PW = 330;
+const PH = 17;
+const PP = 18;
 
 class Panel {
   constructor(x, y, col, facts, holdSec, groupName) {
@@ -767,10 +767,11 @@ class Panel {
     this.done = false;
 
     const lines =
-        facts.reduce((acc, f) => acc + Math.ceil(f.length / 40) + 0.5, 0);  // Adjusted for larger font
-    this.h = Math.min(height * 0.85, PP * 2 + 32 + lines * PH + 10);  // Cap height on mobile
+        facts.reduce((acc, f) => acc + Math.ceil(f.length / 44) + 0.5, 0);
+    this.h = PP * 2 + 28 + lines * PH +
+        8;  // +28 for larger group name header with spacing
     this.x = constrain(x, PP, width - PW - PP);
-    this.y = constrain(y, PP, Math.min(height - PP, Math.max(PP, y)));  // Better positioning on mobile
+    this.y = constrain(y, PP, height - this.h - PP);
   }
 
   update() {
@@ -812,27 +813,27 @@ class Panel {
     // Group name header
     textFont('Courier New');
     textAlign(LEFT, TOP);
-    textSize(18);  // Increased from 14 for mobile readability
+    textSize(14);
     textStyle(BOLD);
     fill(r, g, bl, al * 0.95);
     text(this.groupName.toUpperCase(), this.x + PP, py + PP - 4);
 
     // Facts
-    textSize(14);  // Increased from 11 for mobile readability
+    textSize(11);
     textStyle(NORMAL);
     textLeading(PH);
-    let ty = py + PP + 32;
+    let ty = py + PP + 28;
     for (const fact of this.facts) {
       fill(r, g, bl, al * 0.92);
       text(fact, this.x + PP, ty, PW - PP * 2 - 4);
-      ty += Math.ceil(fact.length / 40) * PH + 10;  // Adjusted for larger text
+      ty += Math.ceil(fact.length / 44) * PH + 8;
     }
 
     // Footer — citation prompt
     fill(r, g, bl, al * 0.35);
-    textSize(12);  // Increased from 9 for mobile readability
+    textSize(9);
     textAlign(RIGHT, BOTTOM);
-    text('S — sources & citations', this.x + PW - PP * 0.5, py + this.h - 8);
+    text('S — sources & citations', this.x + PW - PP * 0.5, py + this.h - 6);
     pop();
   }
 }
