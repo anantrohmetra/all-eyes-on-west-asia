@@ -232,24 +232,6 @@ const GROUPS = [
       },
     ]
   },
-  {
-    name: 'Cyprus',
-    color: [180, 120, 80],
-    count: 20,
-    freq: 138.59,
-    wave: 'sine',
-    facts: [
-      'Targeted by Iranian retaliatory strikes.',
-      'Cyprus likely hosts US military interests and serves as strategic location for regional operations.',
-      'Represents extension of Iranian response beyond Middle East to broader international coalition supporting US-Israel operations.',
-    ],
-    sources: [
-      {
-        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
-      },
-    ]
-  },
 ];
 
 // ── Audio — F# minor 7 pad synthesizer (persistent oscillator pool) ────────
@@ -367,7 +349,7 @@ function playPad(gi, durationSec = 7) {
 // Based on direct mentions in facts.md and documented military/diplomatic involvement
 const AFFECTS = {
   0: [1, 3, 4, 5, 6, 7, 8, 9],     // USA attacks/coordinates with Israel → Iran, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey
-  1: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10], // Iran strikes → USA, Israel, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey, Kuwait, Cyprus
+  1: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10], // Iran strikes → USA, Israel, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey, Kuwait
   2: [1, 3, 4, 5],                 // Israel strikes → Iran, Lebanon, Iraq, Saudi Arabia (likely through drone/missile intelligence)
   3: [0, 2],                       // Lebanon (Hezbollah) → USA, Israel (direct retaliation)
   4: [0, 1, 2],                    // Iraq → USA, Iran, Israel (caught in middle)
@@ -377,7 +359,6 @@ const AFFECTS = {
   8: [1, 0],                       // Oman affected by → Iran, USA (hosts bases, targeted)
   9: [1, 0],                       // Turkey affected by → Iran, USA (airspace violated)
   10: [1, 0],                      // Kuwait affected by → Iran, USA (hosts bases, targeted)
-  11: [1, 0],                      // Cyprus affected by → Iran, USA (hosts bases, targeted)
 };
 
 // Reverse: who affects each party
