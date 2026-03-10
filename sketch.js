@@ -294,17 +294,27 @@ const BASS_FREQS = [92.50, 110.00];  // F#2, A2
 
 function initAudio() {
   if (audioCtx) {
-    // iOS Safari suspends AudioContext between gestures — always try to
-    // resume
-    if (audioCtx.state === 'suspended') audioCtx.resume();
+    // Resume suspended context (iOS Safari, Chrome)
+    if (audioCtx.state === 'suspended') {
+      audioCtx.resume().catch(e => console.log('AudioContext resume failed:', e));
+    }
     return;
   }
-  // webkitAudioContext fallback for older iOS Safari
+  // Create AudioContext with fallbacks
   const AC = window.AudioContext || window['webkitAudioContext'];
+  if (!AC) {
+    console.warn('AudioContext not supported');
+    return;
+  }
+
   audioCtx = new AC();
-  audioCtx.resume();  // iOS requires explicit resume even inside a gesture
-                      // handler
-  // 2 bass oscillators (indices 0–1) + 4 mid oscillators (indices 2–5)
+
+  // Resume context with error handling
+  if (audioCtx.state === 'suspended') {
+    audioCtx.resume().catch(e => console.log('AudioContext resume failed:', e));
+  }
+
+  // Create oscillator pool
   for (let i = 0; i < 6; i++) {
     const osc = audioCtx.createOscillator();
     const gainNode = audioCtx.createGain();
@@ -559,6 +569,15 @@ function setup() {
   init();
   loop();  // keep looping so the first-visit hint can pulse; noLoop() called
            // once settled
+
+  // Initialize audio on first user interaction (required for iOS/mobile)
+  const initAudioOnce = () => {
+    initAudio();
+    document.removeEventListener('click', initAudioOnce);
+    document.removeEventListener('touchstart', initAudioOnce);
+  };
+  document.addEventListener('click', initAudioOnce);
+  document.addEventListener('touchstart', initAudioOnce);
 
   // Mobile touch event handling
   document.addEventListener('touchmove', (e) => {
