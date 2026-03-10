@@ -12,13 +12,15 @@ const GROUPS = [
     facts: [
       'Co-launched major military operation on February 28, 2026.',
       'Conducted approximately 3,400 strikes with 150+ Iranian defense systems disabled.',
-      'US forces struck 3,000+ targets in Iran since February 28.',
+      'Killed 1,255 people in Iran as of March 9, 2026, including Supreme Leader Ali Khamenei.',
+      'Minab girls\' school in south Iran hit on February 28; at least 168 people including children killed.',
       'Sank Iranian warship IRIS Dena in Indian Ocean near Sri Lanka on March 2, 2026. Sri Lankan Navy recovered 80+ bodies and 32 survivors; 100+ missing.',
       'Trump administration demanded Iran\'s nuclear disarmament as defensive measure and unconditional surrender.',
       'Israeli special forces raid on Lebanese village killed 41+ civilians; 40+ wounded.',
       'US soldier died from wounds sustained in attack on US base in Saudi Arabia.',
-      'Issued evacuation orders for residents in southern Lebanon, causing massive displacement.',
+      'Issued evacuation orders for residents in southern Lebanon, causing 700,000 displaced.',
       'Human Rights Watch found evidence Israel used white phosphorus in residential areas of southern Lebanon in violation of international humanitarian law.',
+      'Marine veteran Brian McGinnis, running as Green Party candidate, protested at Capitol hearing shouting "no one wants to fight for Israel". Physically removed by police and Senator Tim Sheehy.',
     ],
     sources: [
       {
@@ -68,10 +70,9 @@ const GROUPS = [
     facts: [
       '1,255 deaths as of March 9, 2026 from USA-Israel strikes.',
       'Supreme Leader Ali Khamenei assassinated in strikes. Son Mojtaba Khamenei declared as 3rd supreme leader.',
-      'Minab girls\' school hit on February 28; at least 168 killed including children.',
       'Fuel depots hit in Tehran and Karaj according to Iran\'s oil ministry.',
-      'Carried out retaliatory strikes on Saudi Arabia, UAE, Qatar, Oman, Iraq, Kuwait, and Turkey.',
-      'Fired 174 ballistic missiles (161 intercepted, 13 fell into sea); launched 689 UAVs (645 intercepted, 44 caused impact); fired 8 cruise missiles (all intercepted).',
+      'Carried out retaliatory strikes on Saudi Arabia, UAE, Qatar, Oman, Iraq, and Turkey.',
+      'Fired 174 ballistic missiles (161 intercepted, 13 fell into sea); launched 689 UAVs (645 intercepted, 44 caused impact); fired 8 cruise missiles .',
     ],
     sources: [
       {
@@ -91,7 +92,7 @@ const GROUPS = [
     facts: [
       '486 people killed as of March 9, 2026 due to Israeli strikes according to Lebanese Health Ministry.',
       'More than 700,000 people displaced from the starting of the war.',
-      'Hezbollah launched rocket and drone attack on military site in Haifa, Israel on March 2, marking first direct strike since November 2024 ceasefire.',
+      'Hezbollah launched rocket and drone attack on military site in Haifa, Israel on March 2 in retaliation for assassination of Iranian Supreme Leader, marking first direct strike since November 2024 ceasefire.',
       'Israeli strikes hit apartment in Ramada Hotel building in Raouche district of Beirut killing at least 4 people and wounding 10 others.',
       'Lebanon experiencing intense military escalation with Israeli airstrikes across the country, particularly targeting southern Beirut suburbs and southern Lebanon.',
     ],
@@ -124,7 +125,7 @@ const GROUPS = [
       'Iraq\'s Prime Minister told US Secretary of State Marco Rubio that Iraq should not be used as launchpad for attacks in Middle East war.',
       'Iran-backed Kataib Imam Ali group reported 4 members killed and 12 injured in US air attacks in northern Iraq.',
       'Iranian Revolutionary Guards stated they targeted Al-Harir Air Base in Kurdistan region with five missiles.',
-      'Wissam Yassin, digital marketer in Iraq, noted Shiite community views Iran weakening as existential threat to political power.',
+      'Wissam Yassin, digital marketer in Iraq, noted Shiite community views Iran weakening as existential threat to political power in Iraq.',
       'Sunni community perceives war as opportunity to rearrange political landscape as Iranian influence on Iraq weakens.',
     ],
     sources: [
@@ -155,7 +156,6 @@ const GROUPS = [
     freq: 164.8,
     wave: 'triangle',
     facts: [
-      'Targeted by Iranian retaliatory strikes for hosting US military bases.',
       'Saudi Ministry of Defense reported destruction of 2 Iranian drones over kingdom\'s oil-rich eastern region.',
       'Oil refineries including Shahbah oilfield hit by incoming Iranian drones.',
       'Saudi kingdom declared Iran\'s attacks on civilian infrastructure—oil facilities, desalination plants, and CIA headquarters in Riyadh—have crossed critical red line.',
@@ -183,7 +183,6 @@ const GROUPS = [
     freq: 185.0,
     wave: 'triangle',
     facts: [
-      'Targeted by Iranian retaliatory strikes for hosting US military bases.',
       'Iranian drones hit hotels Burj al Arab and Fairmont The Palm Dubai, Dubai International Airport, and residential areas.',
       'Dubai International Airport operating with limited resumption of flights following temporary suspension due to regional security concerns.',
       'Zayed International Airport in Abu Dhabi partially operational as of March 10, 2026 following disruptions from Iran-Israel-US conflict.',
@@ -205,7 +204,6 @@ const GROUPS = [
     freq: 196.0,
     wave: 'sine',
     facts: [
-      'Targeted by Iranian retaliatory strikes for hosting US military bases.',
       'Qatar\'s Ministry of Interior reported 66 Iranian missiles targeted Qatar, which were intercepted.',
       'Debris from intercepted missiles caused 16 injuries.',
       'Qatar hosts major US military installations and major LNG export facilities threatened by conflict.',
@@ -231,14 +229,14 @@ const GROUPS = [
     count: 40,
     freq: 164.0,
     wave: 'sine',
-    facts: [
-      'Targeted by Iranian retaliatory strikes for hosting US military bases.',
-      'Hosted multiple rounds of nuclear and political talks between US and Iran; two countries have had no formal diplomatic relations since April 7, 1980.',
-      'Omani Minister of Foreign Affairs Badr al-Busaidi, who mediated US-Iran talks before war, stated diplomatic options remain available to de-escalate Middle East situation.',
-      'Two Iranian drones hit Duqm Port in Al Wusta Governorate with one striking mobile workers\' housing unit.',
-      'Oil tanker flying Marshall Islands flag attacked by Iranian drone boat.',
-      'Fuel tank at Duqm Port hit by several unmanned aircraft on March 3.',
-    ],
+    facts:
+        [
+          'Hosted multiple rounds of nuclear and political talks between US and Iran; two countries have had no formal diplomatic relations since April 7, 1980.',
+          'Omani Minister of Foreign Affairs Badr al-Busaidi, who mediated US-Iran talks before war, stated diplomatic options remain available to de-escalate Middle East situation.',
+          'Two Iranian drones hit Duqm Port in Al Wusta Governorate with one striking mobile workers\' housing unit.',
+          'Oil tanker flying Marshall Islands flag attacked by Iranian drone boat.',
+          'Fuel tank at Duqm Port hit by several unmanned aircraft on March 3.',
+        ],
     sources: [
       {
         label:
@@ -277,30 +275,6 @@ const GROUPS = [
             'Erdogan warns Iran over airspace violations — Turkish Ministry Official Statement',
         url:
             'https://www.dailysabah.com/politics/2026/03/erdogan-iran-airspace-violations'
-      },
-    ]
-  },
-  {
-    name: 'Kuwait',
-    color: [200, 100, 100],
-    count: 30,
-    freq: 146.83,
-    wave: 'triangle',
-    facts: [
-      'Targeted by Iranian retaliatory strikes for hosting US military bases.',
-      'Iranian drone strike hit government high-rise; building engulfed in flames.',
-      'Kuwait hosts critical US military installations.',
-    ],
-    sources: [
-      {
-        label: 'Kuwaiti government high-rise hit by Iranian drone — BBC Video',
-        url: 'https://www.bbc.com/news/videos/c9wnex8g5dyo'
-      },
-      {
-        label:
-            '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
-        url:
-            'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
       },
     ]
   },
@@ -362,7 +336,12 @@ function playPad(gi, durationSec = 7) {
 
   const g = GROUPS[gi];
   const now = audioCtx.currentTime;
-  const midRoot = g.freq || 220.00;
+  // Randomize fundamental frequency for sine waves (±20% variation)
+  let midRoot = g.freq || 220.00;
+  if (g.wave === 'sine') {
+    const variation = 0.8 + Math.random() * 0.4;  // 0.8 to 1.2
+    midRoot *= variation;
+  }
 
   const layers = Math.min(6, Math.max(1, Math.ceil(g.count / 30)));
   const numBass = layers >= 4 ? 2 : 1;
@@ -420,16 +399,21 @@ function playPad(gi, durationSec = 7) {
 // group) ─ When user clicks a party, related parties are highlighted Based on
 // direct mentions in facts.md and documented military/diplomatic involvement
 const AFFECTS = {
-  0: [1, 2, 3, 4, 5, 6, 7, 8, 9],  // USA & Israel → Iran, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey, Kuwait
-  1: [0, 2, 3, 4, 5, 6, 7, 8, 9],  // Iran strikes → USA & Israel, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey, Kuwait
-  2: [0, 1],                        // Lebanon (Hezbollah) → USA & Israel, Iran (direct retaliation)
-  3: [0, 1],                        // Iraq → USA & Israel, Iran (caught in middle)
-  4: [0, 1],                        // Saudi Arabia affected by → USA & Israel, Iran (hosts bases, targeted)
-  5: [0, 1],                        // UAE affected by → USA & Israel, Iran (hosts bases, targeted)
-  6: [0, 1],                        // Qatar affected by → USA & Israel, Iran (hosts bases, targeted)
-  7: [0, 1],                        // Oman affected by → USA & Israel, Iran (hosts bases, targeted)
-  8: [0, 1],                        // Turkey affected by → USA & Israel, Iran (airspace violated)
-  9: [0, 1],                        // Kuwait affected by → USA & Israel, Iran (hosts bases, targeted)
+  0: [
+    1, 2, 3, 4, 5, 6, 7, 8
+  ],  // USA & Israel → Iran, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey
+  1: [
+    0, 2, 3, 4, 5, 6, 7, 8
+  ],  // Iran strikes → USA & Israel, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey
+  2: [
+    0, 1
+  ],  // Lebanon (Hezbollah) → USA & Israel, Iran (direct retaliation)
+  3: [0, 1],     // Iraq → USA & Israel, Iran (caught in middle)
+  4: [1, 0],     // Saudi Arabia affected by → Iran, USA & Israel (hosts bases, targeted)
+  5: [1, 0],     // UAE affected by → Iran, USA & Israel (hosts bases, targeted)
+  6: [1, 0],     // Qatar affected by → Iran, USA & Israel (hosts bases, targeted)
+  7: [1, 0],     // Oman affected by → Iran, USA & Israel (hosts bases, targeted)
+  8: [1, 0],     // Turkey affected by → Iran, USA & Israel (airspace violated)
 };
 
 // Reverse: who affects each party
