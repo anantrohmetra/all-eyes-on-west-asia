@@ -1,36 +1,61 @@
-// ── Middle East Escalation: February 28 – March 9, 2026 ───────────────────────
-// Objective data extracted from facts.md and official sources
-// Each party represented by boid count proportional to involvement level
+// ── Middle East Escalation: February 28 – March 9, 2026
+// ─────────────────────── Objective data extracted from facts.md and official
+// sources Each party represented by boid count proportional to involvement
+// level
 const GROUPS = [
   {
-    name: 'United States',
-    color: [200, 220, 100],
-    count: 140,
-    freq: 329.6,
+    name: 'USA & Israel',
+    color: [165, 180, 140],
+    count: 250,
+    freq: 287.0,
     wave: 'sawtooth',
     facts: [
-      'Co-launched major military operation with Israel on February 28, 2026.',
-      'US forces struck more than 3,000 targets in Iran since February 28.',
+      'Co-launched major military operation on February 28, 2026.',
+      'Conducted approximately 3,400 strikes with 150+ Iranian defense systems disabled.',
+      'US forces struck 3,000+ targets in Iran since February 28.',
       'Sank Iranian warship IRIS Dena in Indian Ocean near Sri Lanka on March 2, 2026. Sri Lankan Navy recovered 80+ bodies and 32 survivors; 100+ missing.',
-      'Trump administration demanded Iran\'s nuclear disarmament as defensive measure.',
-      'Trump demanded unconditional surrender from Iran and stated new Iranian leader must receive US approval.',
+      'Trump administration demanded Iran\'s nuclear disarmament as defensive measure and unconditional surrender.',
+      'Israeli special forces raid on Lebanese village killed 41+ civilians; 40+ wounded.',
+      'US soldier died from wounds sustained in attack on US base in Saudi Arabia.',
+      'Issued evacuation orders for residents in southern Lebanon, causing massive displacement.',
+      'Human Rights Watch found evidence Israel used white phosphorus in residential areas of southern Lebanon in violation of international humanitarian law.',
     ],
     sources: [
       {
-        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
+        label:
+            'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        url:
+            'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
       {
-        label: 'India offered sanctuary to Iranian ship three days before US sank it — BBC News',
+        label: 'In maps: Ten days of strikes across the Middle East — BBC News',
+        url: 'https://www.bbc.com/news/articles/c4g0pnnj8xyo'
+      },
+      {
+        label:
+            'India offered sanctuary to Iranian ship three days before US sank it — BBC News',
         url: 'https://www.bbc.com/news/articles/c2e4yxj0pd3o'
       },
       {
-        label: 'The final voyage of the Iranian warship sunk by the US — BBC News',
+        label:
+            'The final voyage of the Iranian warship sunk by the US — BBC News',
         url: 'https://www.bbc.com/news/articles/c4geelnw7w3o'
       },
       {
-        label: 'Is the Iran war really costing the US $2bn per day? — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/9/is-the-iran-war-really-costing-the-us-2bn-per-day'
+        label:
+            'Dozens killed as Israeli special forces raid Lebanese village — BBC News',
+        url: 'https://www.bbc.com/news/articles/cy8l2p2l3v0o'
+      },
+      {
+        label:
+            'US missile hit military base near Iran school, video analysis shows — BBC Verify',
+        url: 'https://www.bbc.com/news/articles/cvg548lyjnyo'
+      },
+      {
+        label:
+            'Is the Iran war really costing the US $2bn per day? — Al Jazeera',
+        url:
+            'https://www.aljazeera.com/news/2026/3/9/is-the-iran-war-really-costing-the-us-2bn-per-day'
       },
     ]
   },
@@ -41,7 +66,7 @@ const GROUPS = [
     freq: 220.0,
     wave: 'triangle',
     facts: [
-      '1,255 deaths as of March 9, 2026 from US-Israel strikes.',
+      '1,255 deaths as of March 9, 2026 from USA-Israel strikes.',
       'Supreme Leader Ali Khamenei assassinated in strikes. Son Mojtaba Khamenei declared as 3rd supreme leader.',
       'Minab girls\' school hit on February 28; at least 168 killed including children.',
       'Fuel depots hit in Tehran and Karaj according to Iran\'s oil ministry.',
@@ -50,41 +75,10 @@ const GROUPS = [
     ],
     sources: [
       {
-        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
-      },
-    ]
-  },
-  {
-    name: 'Israel',
-    color: [100, 150, 220],
-    count: 120,
-    freq: 246.9,
-    wave: 'sawtooth',
-    facts: [
-      'Israel Defense Forces conducted approximately 3,400 strikes and disabled more than 150 Iranian defense systems as of March 9.',
-      'Sent foot soldiers into South Lebanon and carried out airstrikes killing dozens according to Lebanese health officials.',
-      'Coordinated major military operation with US launched February 28, 2026.',
-      'Israeli special forces raid on Lebanese village killed 41+ civilians; 40+ wounded.',
-      'Issued evacuation orders for residents in southern Lebanon, urging movement north of the Litani River causing massive displacement.',
-      'Human Rights Watch found evidence Israel used white phosphorus in residential areas of southern Lebanon in violation of international humanitarian law.',
-    ],
-    sources: [
-      {
-        label: 'In maps: Ten days of strikes across the Middle East — BBC News',
-        url: 'https://www.bbc.com/news/articles/c4g0pnnj8xyo'
-      },
-      {
-        label: 'Dozens killed as Israeli special forces raid Lebanese village — BBC News',
-        url: 'https://www.bbc.com/news/articles/cy8l2p2l3v0o'
-      },
-      {
-        label: 'US missile hit military base near Iran school, video analysis shows — BBC Verify',
-        url: 'https://www.bbc.com/news/articles/cvg548lyjnyo'
-      },
-      {
-        label: 'Hezbollah launches new salvo of rockets at Israel — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/2/hezbollah-launches-new-salvo-of-rockets-at-israel'
+        label:
+            'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        url:
+            'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
     ]
   },
@@ -103,16 +97,20 @@ const GROUPS = [
     ],
     sources: [
       {
-        label: 'Almost 700,000 displaced in Lebanon as war enters second week — UN News',
+        label:
+            'Almost 700,000 displaced in Lebanon as war enters second week — UN News',
         url: 'https://news.un.org/en/story/2026/03/1167098'
       },
       {
-        label: '\'We couldn\'t sleep because of fear\': Residents flee as Israel pounds south Beirut — BBC',
+        label:
+            '\'We couldn\'t sleep because of fear\': Residents flee as Israel pounds south Beirut — BBC',
         url: 'https://www.bbc.com/news/articles/cwy9xlp46zgo'
       },
       {
-        label: 'Israel strikes Hezbollah financial institutions as Lebanon calls for talks — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/9/israel-strikes-hezbollah-financial-institutions-as-lebanon-calls-for-talks'
+        label:
+            'Israel strikes Hezbollah financial institutions as Lebanon calls for talks — Al Jazeera',
+        url:
+            'https://www.aljazeera.com/news/2026/3/9/israel-strikes-hezbollah-financial-institutions-as-lebanon-calls-for-talks'
       },
     ]
   },
@@ -131,16 +129,22 @@ const GROUPS = [
     ],
     sources: [
       {
-        label: 'Iraq warns against becoming theater for regional conflict — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/4/iraq-warns-against-becoming-theater-for-regional-conflict'
+        label:
+            'Iraq warns against becoming theater for regional conflict — Al Jazeera',
+        url:
+            'https://www.aljazeera.com/news/2026/3/4/iraq-warns-against-becoming-theater-for-regional-conflict'
       },
       {
-        label: 'Kataib Imam Ali: Members killed in US strikes — Telegram statement',
-        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
+        label:
+            'Kataib Imam Ali: Members killed in US strikes — Telegram statement',
+        url:
+            'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
       {
-        label: 'Iraq divided: Sectarian tensions rise amid Iran-US conflict — DW',
-        url: 'https://www.dw.com/en/iraq-divided-sectarian-tensions-rise-amid-iran-us-conflict/a-67032581'
+        label:
+            'Iraq divided: Sectarian tensions rise amid Iran-US conflict — DW',
+        url:
+            'https://www.dw.com/en/iraq-divided-sectarian-tensions-rise-amid-iran-us-conflict/a-67032581'
       },
     ]
   },
@@ -160,12 +164,15 @@ const GROUPS = [
     ],
     sources: [
       {
-        label: '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
+        label:
+            '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
+        url:
+            'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
       },
       {
         label: 'Saudi Arabia declares Iran attacks crossed red line — Reuters',
-        url: 'https://www.reuters.com/world/middle-east/saudi-arabia-declares-iran-attacks-crossed-red-line-2026-03-09/'
+        url:
+            'https://www.reuters.com/world/middle-east/saudi-arabia-declares-iran-attacks-crossed-red-line-2026-03-09/'
       },
     ]
   },
@@ -186,7 +193,8 @@ const GROUPS = [
     sources: [
       {
         label: '2026 Iranian strikes on the United Arab Emirates — Wikipedia',
-        url: 'https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates'
+        url:
+            'https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates'
       },
     ]
   },
@@ -204,12 +212,16 @@ const GROUPS = [
     ],
     sources: [
       {
-        label: '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
+        label:
+            '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
+        url:
+            'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
       },
       {
-        label: 'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
+        label:
+            'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
+        url:
+            'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
     ]
   },
@@ -229,12 +241,16 @@ const GROUPS = [
     ],
     sources: [
       {
-        label: '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
+        label:
+            '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
+        url:
+            'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
       },
       {
-        label: 'Oman calls for dialogue amid escalating Middle East tensions — Middle East Monitor',
-        url: 'https://www.middleeastmonitor.com/20260309-oman-calls-for-dialogue-amid-escalating-middle-east-tensions'
+        label:
+            'Oman calls for dialogue amid escalating Middle East tensions — Middle East Monitor',
+        url:
+            'https://www.middleeastmonitor.com/20260309-oman-calls-for-dialogue-amid-escalating-middle-east-tensions'
       },
     ]
   },
@@ -245,20 +261,22 @@ const GROUPS = [
     freq: 207.65,
     wave: 'sine',
     facts: [
-      'Targeted by Iranian retaliatory strikes.',
       'Iranian missiles and drones penetrated Turkish airspace.',
       'President Erdogan told Iranian President Pezeshkian that airspace violation "cannot be excused for any reason whatsoever."',
-      'Erdogan stated Turkey will continue to take all necessary measures against airspace violations.',
       'Turkey hosts US military presence and strategic importance for regional stability.',
     ],
     sources: [
       {
-        label: '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
+        label:
+            '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
+        url:
+            'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
       },
       {
-        label: 'Erdogan warns Iran over airspace violations — Turkish Ministry Official Statement',
-        url: 'https://www.dailysabah.com/politics/2026/03/erdogan-iran-airspace-violations'
+        label:
+            'Erdogan warns Iran over airspace violations — Turkish Ministry Official Statement',
+        url:
+            'https://www.dailysabah.com/politics/2026/03/erdogan-iran-airspace-violations'
       },
     ]
   },
@@ -279,8 +297,10 @@ const GROUPS = [
         url: 'https://www.bbc.com/news/videos/c9wnex8g5dyo'
       },
       {
-        label: '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
-        url: 'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
+        label:
+            '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
+        url:
+            'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
       },
     ]
   },
@@ -396,21 +416,20 @@ function playPad(gi, durationSec = 7) {
   }
 }
 
-// ── Conflict Relations (group index → indices affected by/related to this group) ─
-// When user clicks a party, related parties are highlighted
-// Based on direct mentions in facts.md and documented military/diplomatic involvement
+// ── Conflict Relations (group index → indices affected by/related to this
+// group) ─ When user clicks a party, related parties are highlighted Based on
+// direct mentions in facts.md and documented military/diplomatic involvement
 const AFFECTS = {
-  0: [1, 3, 4, 5, 6, 7, 8, 9],     // USA attacks/coordinates with Israel → Iran, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey
-  1: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10], // Iran strikes → USA, Israel, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey, Kuwait
-  2: [1, 3, 4, 5],                 // Israel strikes → Iran, Lebanon, Iraq, Saudi Arabia (likely through drone/missile intelligence)
-  3: [0, 2],                       // Lebanon (Hezbollah) → USA, Israel (direct retaliation)
-  4: [0, 1, 2],                    // Iraq → USA, Iran, Israel (caught in middle)
-  5: [1, 0],                       // Saudi Arabia affected by → Iran, USA (hosts bases, targeted)
-  6: [1, 0],                       // UAE affected by → Iran, USA (hosts bases, targeted)
-  7: [1, 0],                       // Qatar affected by → Iran, USA (hosts bases, targeted)
-  8: [1, 0],                       // Oman affected by → Iran, USA (hosts bases, targeted)
-  9: [1, 0],                       // Turkey affected by → Iran, USA (airspace violated)
-  10: [1, 0],                      // Kuwait affected by → Iran, USA (hosts bases, targeted)
+  0: [1, 2, 3, 4, 5, 6, 7, 8, 9],  // USA & Israel → Iran, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey, Kuwait
+  1: [0, 2, 3, 4, 5, 6, 7, 8, 9],  // Iran strikes → USA & Israel, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey, Kuwait
+  2: [0, 1],                        // Lebanon (Hezbollah) → USA & Israel, Iran (direct retaliation)
+  3: [0, 1],                        // Iraq → USA & Israel, Iran (caught in middle)
+  4: [0, 1],                        // Saudi Arabia affected by → USA & Israel, Iran (hosts bases, targeted)
+  5: [0, 1],                        // UAE affected by → USA & Israel, Iran (hosts bases, targeted)
+  6: [0, 1],                        // Qatar affected by → USA & Israel, Iran (hosts bases, targeted)
+  7: [0, 1],                        // Oman affected by → USA & Israel, Iran (hosts bases, targeted)
+  8: [0, 1],                        // Turkey affected by → USA & Israel, Iran (airspace violated)
+  9: [0, 1],                        // Kuwait affected by → USA & Israel, Iran (hosts bases, targeted)
 };
 
 // Reverse: who affects each party
@@ -428,11 +447,12 @@ function setScales(gi) {
 
   if (affected.length) {
     // Clicked actor: highlight self (brightest) and all affected parties (dim)
-    targets[gi] = 2.5;  // Selected group - brightest
+    targets[gi] = 2.5;                        // Selected group - brightest
     affected.forEach(v => targets[v] = 1.2);  // Related parties - dim
   } else if (affectedBy.length) {
-    // Clicked affected party: highlight self (brightest) and all actors affecting it (dim)
-    targets[gi] = 2.5;  // Selected group - brightest
+    // Clicked affected party: highlight self (brightest) and all actors
+    // affecting it (dim)
+    targets[gi] = 2.5;                          // Selected group - brightest
     affectedBy.forEach(o => targets[o] = 1.2);  // Related parties - dim
   } else {
     targets[gi] = 2.5;  // Fallback: brightest
@@ -487,10 +507,11 @@ function showSources(gi) {
   `;
 
   const sourcesList = g.sources
-      .map(
-          s => `
+                          .map(
+                              s => `
       <a href="${s.url}" target="_blank" rel="noopener noreferrer"
-         style="display:block;color:${col};text-decoration:none;margin-bottom:14px;
+         style="display:block;color:${
+                                  col};text-decoration:none;margin-bottom:14px;
                 line-height:1.6;opacity:0.85;font-size:11px;word-wrap:break-word;">
         ↗ ${s.label}
       </a>`).join('');
@@ -501,7 +522,8 @@ function showSources(gi) {
     </div>
     ${sourcesList}
     <div id="src-close"
-         style="margin-top:18px;opacity:0.4;cursor:pointer;font-size:9px;letter-spacing:1px;padding-top:12px;border-top:1px solid ${col}22;">
+         style="margin-top:18px;opacity:0.4;cursor:pointer;font-size:9px;letter-spacing:1px;padding-top:12px;border-top:1px solid ${
+      col}22;">
       × CLOSE
     </div>
   `;
@@ -728,7 +750,8 @@ class Panel {
 
     const lines =
         facts.reduce((acc, f) => acc + Math.ceil(f.length / 44) + 0.5, 0);
-    this.h = PP * 2 + 28 + lines * PH + 8;  // +28 for larger group name header with spacing
+    this.h = PP * 2 + 28 + lines * PH +
+        8;  // +28 for larger group name header with spacing
     this.x = constrain(x, PP, width - PW - PP);
     this.y = constrain(y, PP, height - this.h - PP);
   }
