@@ -690,7 +690,8 @@ function handleInteraction(px, py) {
   lastClickedGi = nearestGi;
   hideSources();
   const g = GROUPS[nearestGi];
-  const dur = 6 + g.facts.length * 1.5;
+  // Sine waves sustain for 90 seconds, others use dynamic duration
+  const dur = g.wave === 'sine' ? 90 : 6 + g.facts.length * 1.5;
   playPad(nearestGi, dur);
   setScales(nearestGi);
   panel = new Panel(px, py, g.color, g.facts, dur, g.name);
