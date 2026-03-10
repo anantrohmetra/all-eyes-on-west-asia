@@ -1,7 +1,7 @@
-
-
-
-
+// ── Middle East Escalation: February 28 – March 9, 2026
+// ─────────────────────── Objective data extracted from facts.md and official
+// sources Each party represented by boid count proportional to involvement
+// level
 const GROUPS = [
   {
     name: 'USA & Israel',
@@ -27,37 +27,37 @@ const GROUPS = [
         label:
             'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
         url:
-            'https:
+            'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
       {
         label: 'In maps: Ten days of strikes across the Middle East — BBC News',
-        url: 'https:
+        url: 'https://www.bbc.com/news/articles/c4g0pnnj8xyo'
       },
       {
         label:
             'India offered sanctuary to Iranian ship three days before US sank it — BBC News',
-        url: 'https:
+        url: 'https://www.bbc.com/news/articles/c2e4yxj0pd3o'
       },
       {
         label:
             'The final voyage of the Iranian warship sunk by the US — BBC News',
-        url: 'https:
+        url: 'https://www.bbc.com/news/articles/c4geelnw7w3o'
       },
       {
         label:
             'Dozens killed as Israeli special forces raid Lebanese village — BBC News',
-        url: 'https:
+        url: 'https://www.bbc.com/news/articles/cy8l2p2l3v0o'
       },
       {
         label:
             'US missile hit military base near Iran school, video analysis shows — BBC Verify',
-        url: 'https:
+        url: 'https://www.bbc.com/news/articles/cvg548lyjnyo'
       },
       {
         label:
             'Is the Iran war really costing the US $2bn per day? — Al Jazeera',
         url:
-            'https:
+            'https://www.aljazeera.com/news/2026/3/9/is-the-iran-war-really-costing-the-us-2bn-per-day'
       },
     ]
   },
@@ -79,7 +79,7 @@ const GROUPS = [
         label:
             'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
         url:
-            'https:
+            'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
     ]
   },
@@ -100,18 +100,18 @@ const GROUPS = [
       {
         label:
             'Almost 700,000 displaced in Lebanon as war enters second week — UN News',
-        url: 'https:
+        url: 'https://news.un.org/en/story/2026/03/1167098'
       },
       {
         label:
             '\'We couldn\'t sleep because of fear\': Residents flee as Israel pounds south Beirut — BBC',
-        url: 'https:
+        url: 'https://www.bbc.com/news/articles/cwy9xlp46zgo'
       },
       {
         label:
             'Israel strikes Hezbollah financial institutions as Lebanon calls for talks — Al Jazeera',
         url:
-            'https:
+            'https://www.aljazeera.com/news/2026/3/9/israel-strikes-hezbollah-financial-institutions-as-lebanon-calls-for-talks'
       },
     ]
   },
@@ -133,19 +133,19 @@ const GROUPS = [
         label:
             'Iraq warns against becoming theater for regional conflict — Al Jazeera',
         url:
-            'https:
+            'https://www.aljazeera.com/news/2026/3/4/iraq-warns-against-becoming-theater-for-regional-conflict'
       },
       {
         label:
             'Kataib Imam Ali: Members killed in US strikes — Telegram statement',
         url:
-            'https:
+            'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
       {
         label:
             'Iraq divided: Sectarian tensions rise amid Iran-US conflict — DW',
         url:
-            'https:
+            'https://www.dw.com/en/iraq-divided-sectarian-tensions-rise-amid-iran-us-conflict/a-67032581'
       },
     ]
   },
@@ -167,12 +167,12 @@ const GROUPS = [
         label:
             '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
         url:
-            'https:
+            'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
       },
       {
         label: 'Saudi Arabia declares Iran attacks crossed red line — Reuters',
         url:
-            'https:
+            'https://www.reuters.com/world/middle-east/saudi-arabia-declares-iran-attacks-crossed-red-line-2026-03-09/'
       },
     ]
   },
@@ -193,7 +193,7 @@ const GROUPS = [
       {
         label: '2026 Iranian strikes on the United Arab Emirates — Wikipedia',
         url:
-            'https:
+            'https://en.wikipedia.org/wiki/2026_Iranian_strikes_on_the_United_Arab_Emirates'
       },
     ]
   },
@@ -213,13 +213,13 @@ const GROUPS = [
         label:
             '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
         url:
-            'https:
+            'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
       },
       {
         label:
             'US-Israel attacks on Iran: Death toll and injuries live tracker — Al Jazeera',
         url:
-            'https:
+            'https://www.aljazeera.com/news/2026/3/1/us-israel-attacks-on-iran-death-toll-and-injuries-live-tracker'
       },
     ]
   },
@@ -242,13 +242,13 @@ const GROUPS = [
         label:
             '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
         url:
-            'https:
+            'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
       },
       {
         label:
             'Oman calls for dialogue amid escalating Middle East tensions — Middle East Monitor',
         url:
-            'https:
+            'https://www.middleeastmonitor.com/20260309-oman-calls-for-dialogue-amid-escalating-middle-east-tensions'
       },
     ]
   },
@@ -268,39 +268,39 @@ const GROUPS = [
         label:
             '\'Reprehensible\': New wave of Iranian missiles, drones target Gulf nations — Al Jazeera',
         url:
-            'https:
+            'https://www.aljazeera.com/news/2026/3/9/reprehensible-new-wave-of-iranian-missiles-drones-target-gulf-nations'
       },
       {
         label:
             'Erdogan warns Iran over airspace violations — Turkish Ministry Official Statement',
         url:
-            'https:
+            'https://www.dailysabah.com/politics/2026/03/erdogan-iran-airspace-violations'
       },
     ]
   },
 ];
 
-
+// ── Audio — F# minor 7 pad synthesizer (persistent oscillator pool) ────────
 let audioCtx = null;
-let oscPool = [];
+let oscPool = [];  // 6 always-running {osc, gain} pairs
 
+// Frequencies extracted from GROUPS array—no need for separate mapping
 
-
-
+// F# minor 7 chord tones in semitones: root, m3, P5, m7
 const FM7_SEMITONES = [0, 3, 7, 10];
 
-
-const BASS_FREQS = [92.50, 110.00];
+// Bass oscillators: always-present F# minor notes below 150 Hz
+const BASS_FREQS = [92.50, 110.00];  // F#2, A2
 
 function initAudio() {
   if (audioCtx) {
-
+    // Resume suspended context (iOS Safari, Chrome)
     if (audioCtx.state === 'suspended') {
       audioCtx.resume().catch(e => console.log('AudioContext resume failed:', e));
     }
     return;
   }
-
+  // Create AudioContext with fallbacks
   const AC = window.AudioContext || window['webkitAudioContext'];
   if (!AC) {
     console.warn('AudioContext not supported');
@@ -309,12 +309,12 @@ function initAudio() {
 
   audioCtx = new AC();
 
-
+  // Resume context with error handling
   if (audioCtx.state === 'suspended') {
     audioCtx.resume().catch(e => console.log('AudioContext resume failed:', e));
   }
 
-
+  // Create oscillator pool
   for (let i = 0; i < 6; i++) {
     const osc = audioCtx.createOscillator();
     const gainNode = audioCtx.createGain();
@@ -338,18 +338,18 @@ function stopAllTones() {
   }
 }
 
-
-
-
+// Layout: oscillators 0–1 = bass (<150 Hz), oscillators 2–5 = mid (200–600 Hz).
+// Bass: 1 osc always, 2 when layers >= 4.
+// Mid: remaining layers, chord tones octave-folded into 200–600 Hz.
 function playPad(gi, durationSec = 7) {
   initAudio();
 
   const g = GROUPS[gi];
   const now = audioCtx.currentTime;
-
+  // Randomize fundamental frequency for sine waves (±20% variation)
   let midRoot = g.freq || 220.00;
   if (g.wave === 'sine') {
-    const variation = 0.8 + Math.random() * 0.4;
+    const variation = 0.8 + Math.random() * 0.4;  // 0.8 to 1.2
     midRoot *= variation;
   }
 
@@ -368,7 +368,7 @@ function playPad(gi, durationSec = 7) {
     osc.frequency.cancelScheduledValues(now);
 
     if (i < numBass) {
-
+      // Bass layer — fixed F# minor notes below 150 Hz, glide to target
       const targetFreq = BASS_FREQS[i];
       osc.frequency.setValueAtTime(osc.frequency.value, now);
       osc.frequency.exponentialRampToValueAtTime(targetFreq, now + glideTime);
@@ -378,14 +378,14 @@ function playPad(gi, durationSec = 7) {
       gain.gain.linearRampToValueAtTime(0, now + durationSec);
 
     } else if (i < layers) {
-
+      // Mid layer — FM7 chord tone, octave-folded into 200–600 Hz
       const midIdx = i - numBass;
       const semitones = FM7_SEMITONES[midIdx % FM7_SEMITONES.length];
       let targetFreq = midRoot * Math.pow(2, semitones / 12);
-
+      // Fold into 200–600 Hz
       while (targetFreq > 600) targetFreq /= 2;
       while (targetFreq < 200) targetFreq *= 2;
-
+      // Gentle detune spread across mid layers (±6 cents max)
       const detuneCents =
           numMid > 1 ? (midIdx - (numMid - 1) / 2) * (12 / (numMid - 1)) : 0;
       targetFreq *= Math.pow(2, detuneCents / 1200);
@@ -398,35 +398,35 @@ function playPad(gi, durationSec = 7) {
       gain.gain.linearRampToValueAtTime(0, now + durationSec);
 
     } else {
-
+      // Unused layer: fade out
       gain.gain.setValueAtTime(gain.gain.value, now);
       gain.gain.linearRampToValueAtTime(0, now + 0.5);
     }
   }
 }
 
-
-
-
+// ── Conflict Relations (group index → indices affected by/related to this
+// group) ─ When user clicks a party, related parties are highlighted Based on
+// direct mentions in facts.md and documented military/diplomatic involvement
 const AFFECTS = {
   0: [
     1, 2, 3, 4, 5, 6, 7, 8
-  ],
+  ],  // USA & Israel → Iran, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey
   1: [
     0, 2, 3, 4, 5, 6, 7, 8
-  ],
+  ],  // Iran strikes → USA & Israel, Lebanon, Iraq, Saudi Arabia, UAE, Qatar, Oman, Turkey
   2: [
     0, 1
-  ],
-  3: [0, 1],
-  4: [1, 0],
-  5: [1, 0],
-  6: [1, 0],
-  7: [1, 0],
-  8: [1, 0],
+  ],  // Lebanon (Hezbollah) → USA & Israel, Iran (direct retaliation)
+  3: [0, 1],     // Iraq → USA & Israel, Iran (caught in middle)
+  4: [1, 0],     // Saudi Arabia affected by → Iran, USA & Israel (hosts bases, targeted)
+  5: [1, 0],     // UAE affected by → Iran, USA & Israel (hosts bases, targeted)
+  6: [1, 0],     // Qatar affected by → Iran, USA & Israel (hosts bases, targeted)
+  7: [1, 0],     // Oman affected by → Iran, USA & Israel (hosts bases, targeted)
+  8: [1, 0],     // Turkey affected by → Iran, USA & Israel (airspace violated)
 };
 
-
+// Reverse: who affects each party
 const AFFECTED_BY = {};
 for (const [actor, affected] of Object.entries(AFFECTS)) {
   for (const party of affected) {
@@ -440,22 +440,22 @@ function setScales(gi) {
   const targets = {};
 
   if (affected.length) {
-
-    targets[gi] = 2.5;
-    affected.forEach(v => targets[v] = 1.2);
+    // Clicked actor: highlight self (brightest) and all affected parties (dim)
+    targets[gi] = 2.5;                        // Selected group - brightest
+    affected.forEach(v => targets[v] = 1.2);  // Related parties - dim
   } else if (affectedBy.length) {
-
-
-    targets[gi] = 2.5;
-    affectedBy.forEach(o => targets[o] = 1.2);
+    // Clicked affected party: highlight self (brightest) and all actors
+    // affecting it (dim)
+    targets[gi] = 2.5;                          // Selected group - brightest
+    affectedBy.forEach(o => targets[o] = 1.2);  // Related parties - dim
   } else {
-    targets[gi] = 2.5;
+    targets[gi] = 2.5;  // Fallback: brightest
   }
 
-
+  // Hide all other groups completely
   for (let i = 0; i < GROUPS.length; i++) {
     if (!(i === gi || affected.includes(i) || affectedBy.includes(i))) {
-      targets[i] = 0;
+      targets[i] = 0;  // Invisible
     }
   }
 
@@ -466,7 +466,7 @@ function resetScales() {
   for (const b of boids) b.targetScale = 1.0;
 }
 
-
+// ── Sources overlay (HTML, so links are real and clickable) ───────────────
 let lastClickedGi = null;
 let sourcesVisible = false;
 
@@ -476,7 +476,7 @@ function showSources(gi) {
   const [r, gv, bl] = g.color;
   const col = `rgb(${r},${gv},${bl})`;
 
-
+  // Inject keyframe once
   if (!document.getElementById('src-style')) {
     const s = document.createElement('style');
     s.id = 'src-style';
@@ -524,7 +524,7 @@ function showSources(gi) {
 
   document.body.appendChild(div);
 
-
+  // Ensure all links are clickable
   const links = div.querySelectorAll('a');
   links.forEach(link => {
     link.addEventListener('click', (e) => {
@@ -534,7 +534,7 @@ function showSources(gi) {
 
   document.getElementById('src-close').addEventListener('click', hideSources);
 
-
+  // Prevent panel from closing when clicking inside it
   div.addEventListener('click', (e) => {
     e.stopPropagation();
   });
@@ -557,20 +557,20 @@ function keyPressed() {
   }
 }
 
-
+// ── State ──────────────────────────────────────────────────────────────────
 let boids = [];
 let centers = [];
 let panel = null;
 
-
+// ── Setup ──────────────────────────────────────────────────────────────────
 function setup() {
   createCanvas(windowWidth, windowHeight);
   frameRate(30);
   init();
-  loop();
+  loop();  // keep looping so the first-visit hint can pulse; noLoop() called
+           // once settled
 
-
-
+  // Initialize audio on first user interaction (required for iOS/mobile)
   const initAudioOnce = () => {
     initAudio();
     document.removeEventListener('click', initAudioOnce);
@@ -579,7 +579,7 @@ function setup() {
   document.addEventListener('click', initAudioOnce);
   document.addEventListener('touchstart', initAudioOnce);
 
-
+  // Mobile touch event handling
   document.addEventListener('touchmove', (e) => {
     if (e.target === document.body || e.target.tagName === 'CANVAS') {
       e.preventDefault();
@@ -655,18 +655,18 @@ function spawnBoids() {
   });
 }
 
-
+// ── Draw ───────────────────────────────────────────────────────────────────
 function draw() {
   background(10, 10, 15);
 
   let allSettled = true;
   for (const b of boids) {
-
+    // Lerp scale toward target
     b.scale += (b.targetScale - b.scale) * 0.06;
     if (Math.abs(b.scale - b.targetScale) > 0.005) allSettled = false;
 
     const [r, g, bl] = b.col;
-
+    // Opacity: selected boids are brightest, invisible when scale=0
     const baseAlpha = b.circle ? 220 : 200;
     const alpha = baseAlpha * constrain(b.scale * 0.5 + 0.2, 0, 1.5);
 
@@ -689,7 +689,7 @@ function draw() {
     pop();
   }
 
-
+  // First-visit hint
   if (firstTouch) {
     const hint = 'tap to explore';
     const pulse = 0.55 + 0.45 * sin(frameCount * 0.06);
@@ -713,7 +713,7 @@ function draw() {
   }
 }
 
-
+// ── Interaction ────────────────────────────────────────────────────────────
 let firstTouch = true;
 
 function handleInteraction(px, py) {
@@ -730,7 +730,7 @@ function handleInteraction(px, py) {
   lastClickedGi = nearestGi;
   hideSources();
   const g = GROUPS[nearestGi];
-
+  // Sine waves sustain for 90 seconds, others use dynamic duration
   const dur = g.wave === 'sine' ? 90 : 6 + g.facts.length * 1.5;
   playPad(nearestGi, dur);
   setScales(nearestGi);
@@ -738,18 +738,18 @@ function handleInteraction(px, py) {
   loop();
 }
 
-
+// Desktop click
 function mousePressed() {
   if (touches.length === 0) handleInteraction(mouseX, mouseY);
 }
 
-
+// Mobile touch — return false prevents scroll and stops mouse event double-fire
 function touchStarted() {
   if (touches.length > 0) handleInteraction(touches[0].x, touches[0].y);
   return false;
 }
 
-
+// ── Panel ──────────────────────────────────────────────────────────────────
 const PW = 330;
 const PH = 17;
 const PP = 18;
@@ -769,7 +769,7 @@ class Panel {
     const lines =
         facts.reduce((acc, f) => acc + Math.ceil(f.length / 44) + 0.5, 0);
     this.h = PP * 2 + 28 + lines * PH +
-        8;
+        8;  // +28 for larger group name header with spacing
     this.x = constrain(x, PP, width - PW - PP);
     this.y = constrain(y, PP, height - this.h - PP);
   }
@@ -806,11 +806,11 @@ class Panel {
     fill(8, 8, 14, al * 0.93);
     rect(this.x, py, PW, this.h, 5);
 
-
+    // Accent bar
     fill(r, g, bl, al);
     rect(this.x, py, 3, this.h, 5, 0, 0, 5);
 
-
+    // Group name header
     textFont('Courier New');
     textAlign(LEFT, TOP);
     textSize(14);
@@ -818,7 +818,7 @@ class Panel {
     fill(r, g, bl, al * 0.95);
     text(this.groupName.toUpperCase(), this.x + PP, py + PP - 4);
 
-
+    // Facts
     textSize(11);
     textStyle(NORMAL);
     textLeading(PH);
@@ -829,7 +829,7 @@ class Panel {
       ty += Math.ceil(fact.length / 44) * PH + 8;
     }
 
-
+    // Footer — citation prompt
     fill(r, g, bl, al * 0.35);
     textSize(9);
     textAlign(RIGHT, BOTTOM);
