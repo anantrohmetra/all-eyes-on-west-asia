@@ -1693,8 +1693,8 @@ function mouseWheel(event) {
   const zoomFactor = event.deltaY > 0 ? 1 - zoomSpeed : 1 + zoomSpeed;
   const newZoom = zoom * zoomFactor;
 
-  // Clamp zoom between 0.5 and 3
-  zoom = constrain(newZoom, 0.5, 3);
+  // Clamp zoom between 0.5 and 8
+  zoom = constrain(newZoom, 0.5, 8);
   loop();
 
   return false;
